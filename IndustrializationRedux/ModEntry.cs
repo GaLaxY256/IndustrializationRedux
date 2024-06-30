@@ -604,16 +604,14 @@ namespace IndustrializationRedux
             int minStack = 1;
             int maxStack = 1;
             int totalStack = 0;
-            int requiredCountMax = 1;
             int baseOutputStack = 1;
             Farmer who = Game1.player;
-            GameLocation location = machine.Location; // get the current location of the player
+            GameLocation location = machine.Location;
             string locationName = machine.Location.Name;
             int fishCategory = -4;
             int trashCounter = 0;
-            Item randomFish = null;
-            List<string> nonFishCategory = new List<string>();
-            Random rand = new Random();
+            List<string> nonFishContext = new();
+            Random rand = new();
             foreach (KeyValuePair<string, ObjectData> v in Game1.objectData)
             {
                 if (ItemRegistry.HasItemId(inputItem, v.Key))
@@ -624,39 +622,41 @@ namespace IndustrializationRedux
             }
             do
             {
-                int randomDepth = (int)Math.Floor(Math.Pow(rand.NextDouble(), 2) * 5);
-                randomFish = location.getFish(0, baitID, randomDepth, who, 1, bobberTile, locationName);
+                int randomDepth = (int)Math.Floor(Math.Pow(rand.NextDouble(), 2) * 2);
+                Item randomFish = location.getFish(0, baitID, randomDepth, who, 1, bobberTile, locationName);
                 foreach (KeyValuePair<string, ObjectData> x in Game1.objectData)
                 {
                     if (ItemRegistry.HasItemId(randomFish, x.Key))
                     {
                         fishID = x.Key;
                         fishCategory = x.Value.Category;
-                        nonFishCategory = x.Value.ContextTags;
-                        if (!fishCategory.Equals(-4) || !nonFishCategory.Contains("fish_nonfish"))
+                        nonFishContext = x.Value.ContextTags;
+                        if (!fishCategory.Equals(-4))
                         {
                             trashCounter++;
                         };
                         break;
                     }
                 }
-            } while ((fishCategory.Equals(-20)||nonFishCategory.Contains("fish_legendary"))  & !trashCounter.Equals(10));
+            } while (((fishCategory.Equals(-20)) || 
+            (fishID.Equals("(O)842")) || 
+            (nonFishContext.Contains("fish_legendary"))) &&
+            !trashCounter.Equals(10)); 
             Random r = Utility.CreateDaySaveRandom(bobberTile.X, bobberTile.Y * 77f, Game1.timeOfDay);
             if (outputData.CustomData.ContainsKey("MaxBaitCount") &&
-                Int32.TryParse(outputData.CustomData["MaxBaitCount"], out requiredCountMax) &&
-                MachineDataUtility.TryGetMachineOutputRule(machine, machine.GetMachineData(), MachineOutputTrigger.ItemPlacedInMachine, inputItem, who, machine.Location, out var _, out var triggerRule, out var _, out var _))
+                Int32.TryParse(outputData.CustomData["MaxBaitCount"], out int requiredCountMax) &&
+                MachineDataUtility.TryGetMachineOutputRule(machine, machine.GetMachineData(), MachineOutputTrigger.ItemPlacedInMachine, inputItem, who, machine.Location, out _, out var triggerRule, out _, out _))
             {
                 int requiredCountMin = triggerRule.RequiredCount;
                 if (requiredCountMax >= requiredCountMin)
                 {
                     baseOutputStack = Math.Min(inputItem.Stack, requiredCountMax);
-                    int Stack = (int)Utility.ApplyQuantityModifiers(baseOutputStack, outputData.StackModifiers, outputData.StackModifierMode, machine.Location, who, randomFish, inputItem);
                     Object.ConsumeInventoryItem(who, inputItem, baseOutputStack - requiredCountMin);
                 }
             }
             for (int i = 0; i < baseOutputStack; i++)
             {
-                if (baitID.Equals("774"))
+                if (baitID.Equals("(O)774"))
                 {
                     double chance1 = r.Next(0, 2);
                     double chance2 = ((Game1.random.NextDouble() < 0.25 + Game1.player.DailyLuck / 2.0) ? 1 : 0);
@@ -665,12 +665,12 @@ namespace IndustrializationRedux
                         maxStack = minStack = 3;
                     };
                 }
-                if (baitID.Equals("ChallengeBait")) 
+                if (baitID.Equals("(O)ChallengeBait")) 
                 {
                     minStack = 1;
-                    maxStack = 4;
+                    maxStack = 4; 
                 }
-                int stackSum = r.Next(minStack, maxStack);
+                int stackSum = r.Next(minStack, maxStack); 
                 totalStack += stackSum;
             }
             overrideMinutesUntilReady = 20 * baseOutputStack;
