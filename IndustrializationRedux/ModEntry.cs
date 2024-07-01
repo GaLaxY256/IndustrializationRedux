@@ -452,8 +452,8 @@ namespace IndustrializationRedux
             {
                 if (data.CountForMonoculture)
                 {
-                    anyMonoShipped300 = anyMonoShipped300 || this.farmerShipped(data.HarvestItemId, 300);
-                    anyMonoShipped777 = anyMonoShipped777 || this.farmerShipped(data.HarvestItemId, 777);
+                    anyMonoShipped300 = anyMonoShipped300 || FarmerShipped(data.HarvestItemId, 300);
+                    anyMonoShipped777 = anyMonoShipped777 || FarmerShipped(data.HarvestItemId, 777);
                 }
             }
         }
@@ -587,7 +587,7 @@ namespace IndustrializationRedux
         /// <param name="itemId"></param>
         /// <param name="number"></param>
         /// <returns></returns>
-        private bool farmerShipped(string itemId, int number)
+        private static bool FarmerShipped(string itemId, int number)
         {
             if (Game1.player.basicShipped.TryGetValue(itemId, out var timesShipped))
             {
@@ -639,24 +639,22 @@ namespace IndustrializationRedux
                     }
                 }
             } while (((fishCategory.Equals(-20)) || 
-            (fishID.Equals("(O)842")) || 
-            (nonFishContext.Contains("fish_legendary"))) &&
+            ((fishID!=null && fishID.Equals("842")))) &&
             !trashCounter.Equals(10)); 
             Random r = Utility.CreateDaySaveRandom(bobberTile.X, bobberTile.Y * 77f, Game1.timeOfDay);
-            if (outputData.CustomData.ContainsKey("MaxBaitCount") &&
-                Int32.TryParse(outputData.CustomData["MaxBaitCount"], out int requiredCountMax) &&
+            if (outputData.CustomData.ContainsKey("selph.ExtraMachineConfig.RequiredCountMax") &&
+                Int32.TryParse(outputData.CustomData["selph.ExtraMachineConfig.RequiredCountMax"], out int MaxRequiredCount) &&
                 MachineDataUtility.TryGetMachineOutputRule(machine, machine.GetMachineData(), MachineOutputTrigger.ItemPlacedInMachine, inputItem, who, machine.Location, out _, out var triggerRule, out _, out _))
             {
-                int requiredCountMin = triggerRule.RequiredCount;
-                if (requiredCountMax >= requiredCountMin)
+                int MinRequiredCount = triggerRule.RequiredCount;
+                if (MaxRequiredCount >= MinRequiredCount)
                 {
-                    baseOutputStack = Math.Min(inputItem.Stack, requiredCountMax);
-                    Object.ConsumeInventoryItem(who, inputItem, baseOutputStack - requiredCountMin);
+                    baseOutputStack = Math.Min(inputItem.Stack, MaxRequiredCount);
                 }
             }
             for (int i = 0; i < baseOutputStack; i++)
             {
-                if (baitID.Equals("(O)774"))
+                if (baitID.Equals("774"))
                 {
                     double chance1 = r.Next(0, 2);
                     double chance2 = ((Game1.random.NextDouble() < 0.25 + Game1.player.DailyLuck / 2.0) ? 1 : 0);
@@ -665,7 +663,7 @@ namespace IndustrializationRedux
                         maxStack = minStack = 3;
                     };
                 }
-                if (baitID.Equals("(O)ChallengeBait")) 
+                if (baitID.Equals("ChallengeBait")) 
                 {
                     minStack = 1;
                     maxStack = 4; 
@@ -674,7 +672,7 @@ namespace IndustrializationRedux
                 totalStack += stackSum;
             }
             overrideMinutesUntilReady = 20 * baseOutputStack;
-            return new Object(fishID, totalStack);
+            return new Object(fishID, 1);
         }
     }
 }
