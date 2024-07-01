@@ -1,0 +1,11 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "data/quests",
+            "Entries": {
+                "413271801": "ItemDelivery/Chromium Furnace/Clint is in need of a few prismatic shards for his new furnace project./Bring Clint 3 prismatic shards/Clint (O)74 3/-1/0/-1/false/$1 {{ModID}}.ChroFurnaceComplete#Oh, you actually brought them! Thanks! I'll... uh...let you know as soon as I finish the furnace.#$e#Umm, why am I saying this more than once?"
+            }
+        }
+    ]
+}

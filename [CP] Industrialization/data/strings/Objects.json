@@ -1,0 +1,34 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Strings/Objects",
+            "Entries": {
+                "{{ModID}}.Brick_Name": "Brick",
+                "{{ModID}}.Brick_Description": "Highly durable brick, used in crafting various machines.",
+                "{{ModID}}.ChroBar_Name": "Chromium Bar",
+                "{{ModID}}.ChroBar_Description": "A very powerful and strong alloy.",
+                "{{ModID}}.ChroCompound_Name": "Chromium Compound",
+                "{{ModID}}.ChroCompound_Description": "Mixture of Iridium, Quartz and Prismatic powders, ready to be smelted.",
+                "{{ModID}}.PulvCopper_Name": "Pulverized Copper",
+                "{{ModID}}.PulvCopper_Description": "Large pile of pure copper, must be smelted in an Electric Furnace.",
+                "{{ModID}}.PulvGold_Name": "Pulverized Gold",
+                "{{ModID}}.PulvGold_Description": "Large pile of pure gold, must be smelted in an Electric Furnace.",
+                "{{ModID}}.PulvIridium_Name": "Pulverized Iridium",
+                "{{ModID}}.PulvIridium_Description": "Large pile of pure iridium, must be smelted in an Electric Furnace.",
+                "{{ModID}}.PulvIron_Name": "Pulverized Iron",
+                "{{ModID}}.PulvIron_Description": "Large pile of pure iron, must be smelted in an Electric Furnace.",
+                "{{ModID}}.PulvPris_Name": "Pulverized Prismatic Shard",
+                "{{ModID}}.PulvPris_Description": "Large pile of pure prismatic stones, must be smelted in an Electric Furnace.",
+                "{{ModID}}.PulvQuartz_Name": "Pulverized Quartz",
+                "{{ModID}}.PulvQuartz_Description": "Large pile of pure quartz, must be smelted in an Electric Furnace.",
+                "{{ModID}}.PulvRadioactive_Name": "Pulverized Radioactive Material",
+                "{{ModID}}.PulvRadioactive_Description": "Large pile of pure radioactive material, must be smelted in an Electric Furnace."
+                //"{{ModID}}.SmeltedFairyStone": "Smelted Fairy Stone",
+                //"{{ModID}}.SmeltedFairyStone_Description": "Fairy Stone that has been melted down and refined.",
+                // "{{ModID}}.Charcoal_Name": "Charcoal",
+                // "{{ModID}}.Charcoal_Description": "A versatile black residue used for smoking and smelting, performs better than coal on small-scale smelting."
+            }
+        }
+    ]
+}

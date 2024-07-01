@@ -1,0 +1,3485 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/Machines",
+            "Entries": {
+                "(BC){{ModID}}.AutoMiner": {
+                    "OutputRules": [
+                        {
+                            "Id": "Default_",
+                            "Triggers": [
+                                {    
+                                "Id": "MachinePutDown, OutputCollected",
+                                "Trigger": "MachinePutDown, OutputCollected"
+                                }
+                            ],
+                            "UseFirstValidOutput": true,
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)386", //Iridium Ore
+                                "Condition": "RANDOM .07",
+                                "MinStack": "16",
+                                "MaxStack": "32",
+                                "CustomData": {
+                                    "selph.ExtraMachineConfig.ExtraOutputIds": "IR.ClayExtra"
+                                }
+                                },
+                                {
+                                "ItemID": "(O)537", //Magma Geode
+                                "Condition": "RANDOM .10",
+                                "MinStack": "2",
+                                "MaxStack": "10",
+                                "CustomData": {
+                                    "selph.ExtraMachineConfig.ExtraOutputIds": "IR.ClayExtra"
+                                }
+                                },
+                                {
+                                "ItemID": "(O)86", //Earth Crystal
+                                "Condition": "RANDOM .10",
+                                "MinStack": "2",
+                                "MaxStack": "4",
+                                "CustomData": {
+                                    "selph.ExtraMachineConfig.ExtraOutputIds": "IR.ClayExtra"
+                                }
+                                },
+                                {
+                                "ItemID": "(O)384", //Gold Ore
+                                "Condition": "RANDOM .15",
+                                "MinStack": "16",
+                                "MaxStack": "32",
+                                "CustomData": {
+                                    "selph.ExtraMachineConfig.ExtraOutputIds": "IR.ClayExtra"
+                                }
+                                },
+                                {
+                                "ItemID": "(O)536", //Frozen Geode
+                                "Condition": "RANDOM .15",
+                                "MinStack": "3",
+                                "MaxStack": "10",
+                                "CustomData": {
+                                    "selph.ExtraMachineConfig.ExtraOutputIds": "IR.ClayExtra"
+                                }
+                                },
+                                {
+                                "ItemID": "(O)84", //Frozen Tear
+                                "Condition": "RANDOM .15",
+                                "MinStack": "1",
+                                "MaxStack": "3",
+                                "CustomData": {
+                                    "selph.ExtraMachineConfig.ExtraOutputIds": "IR.ClayExtra"
+                                }
+                                },
+                                {
+                                "ItemID": "(O)82", //Fire Quartz
+                                "Condition": "RANDOM .20",
+                                "MinStack": "1",
+                                "MaxStack": "3",
+                                "CustomData": {
+                                    "selph.ExtraMachineConfig.ExtraOutputIds": "IR.ClayExtra"
+                                }
+                                },
+                                {
+                                "ItemID": "(O)380", //Iron Ore
+                                "Condition": "RANDOM .30",
+                                "MinStack": "24",
+                                "MaxStack": "48",
+                                "CustomData": {
+                                    "selph.ExtraMachineConfig.ExtraOutputIds": "IR.ClayExtra"
+                                }
+                                },
+                                {
+                                "ItemID": "(O)535", //Geode
+                                "Condition": "RANDOM .30",
+                                "MinStack": "5",
+                                "MaxStack": "10",
+                                "CustomData": {
+                                    "selph.ExtraMachineConfig.ExtraOutputIds": "IR.ClayExtra"
+                                }
+                                },
+                                {
+                                "ItemID": "(O)80", //Quartz
+                                "Condition": "RANDOM .40",
+                                "MinStack": "3",
+                                "MaxStack": "6",
+                                "CustomData": {
+                                    "selph.ExtraMachineConfig.ExtraOutputIds": "IR.ClayExtra"
+                                }
+                                },
+                                {
+                                "ItemID": "(O)378", //Copper Ore
+                                "Condition": "RANDOM .60",
+                                "MinStack": "32",
+                                "MaxStack": "64",
+                                "CustomData": {
+                                    "selph.ExtraMachineConfig.ExtraOutputIds": "IR.ClayExtra"
+                                }
+                                },
+                                {
+                                "ItemID": "(O)382", //Coal
+                                "Condition": "RANDOM .85",
+                                "MinStack": "5",
+                                "MaxStack": "16",
+                                "CustomData": {
+                                    "selph.ExtraMachineConfig.ExtraOutputIds": "IR.ClayExtra"
+                                }
+                                },
+                                {
+                                "ItemID": "(O)390", //Stone
+                                "MinStack": "15",
+                                "MaxStack": "35",
+                                "CustomData": {
+                                    "selph.ExtraMachineConfig.ExtraOutputIds": "IR.ClayExtra"
+                                }
+                                }
+                            ],
+                            "DaysUntilReady": 1
+                        }
+                    ],
+                    "LoadEffects": [
+                        {
+                            "Id": "Default",
+                            "Sounds": [
+                            ],
+                            "Frames": [1,2,3],
+                            "Interval": 60
+                        }
+                    ],
+                    "WorkingEffects": [
+                        {
+                            "Id": "Default",
+                            "Sounds": [
+                            ],
+                            "Frames": [1,2,3],
+                            "Interval": 60
+                        }
+                    ],
+                    "PreventTimePass": [
+                        "Rain",
+                        "Inside"
+                    ],
+                    "WobbleWhileWorking": false,
+                    "WorkingEffectChance": 1.0
+                },
+                "(BC){{ModID}}.CombustionMiner": {
+                    "OutputRules": [
+                        {
+                            "Id": "Default_",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemId": "382"
+                                }
+                            ],
+                            "UseFirstValidOutput": true,
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)390", //Stone
+                                "Condition": "RANDOM .8",
+                                "MinStack": "8",
+                                "MaxStack": "24"
+                                },
+                                {
+                                "ItemID": "(O)330", //Clay
+                                "Condition": "RANDOM .5",
+                                "MinStack": "2", //Was 1
+                                "MaxStack": "5", //Was 2
+                                "CustomData": {
+                                    "selph.ExtraMachineConfig.ExtraOutputIds": "IR.ClayExtra"
+                                }
+                                },
+                                {
+                                "ItemID": "(O)771", //Fibre
+                                "Condition": "RANDOM .6",
+                                "MinStack": "2",
+                                "MaxStack": "4",
+                                "CustomData": {
+                                    "selph.ExtraMachineConfig.ExtraOutputIds": "IR.ClayExtra"
+                                }
+                                }
+                            ],
+                            "MinutesUntilReady": 60
+                        }
+                    ],
+                    "LoadEffects": [
+                        {
+                            "Id": "Default",
+                            "Sounds": [
+                            ],
+                            "Frames": [1,2,3],
+                            "Interval": 60
+                        }
+                    ],
+                    "WorkingEffects": [
+                        {
+                            "Id": "Default",
+                            "Sounds": [
+                            ],
+                            "Frames": [1,2,3],
+                            "Interval": 60
+                        }
+                    ],
+                    "PreventTimePass": [
+                        "Inside"
+                    ],
+                    "WobbleWhileWorking": false,
+                    "WorkingEffectChance": 1.0
+                },
+                "(BC){{ModID}}.AlternatorEFurnace": {
+                    "OutputRules": [
+                    {
+                        "Id": "Alternator_IridiumBar",
+                        "Triggers": [
+                            {    
+                            "Id": "ItemPlacedInMachine",
+                            "Trigger": "ItemPlacedInMachine",
+                            "RequiredItemID": "{{ModID}}.PulvIridium"
+                            }
+                        ],
+                        "OutputItem": [
+                            {
+                            "ItemID": "(O)337" //Iridium Bar
+                            }
+                        ],
+                        "MinutesUntilReady": 240
+                    },
+                    {
+                        "Id": "Alternator_GoldBar",
+                        "Triggers": [
+                            {    
+                            "Id": "ItemPlacedInMachine",
+                            "Trigger": "ItemPlacedInMachine",
+                            "RequiredItemID": "{{ModID}}.PulvGold"
+                            }
+                        ],
+                        "OutputItem": [
+                            {
+                            "ItemID": "(O)336" //Gold Bar
+                            }
+                        ],
+                        "MinutesUntilReady": 150
+                    },
+                    {
+                        "Id": "Alternator_IronBar",
+                        "Triggers": [
+                            {    
+                            "Id": "ItemPlacedInMachine",
+                            "Trigger": "ItemPlacedInMachine",
+                            "RequiredItemID": "{{ModID}}.PulvIron"
+                            }
+                        ],
+                        "OutputItem": [
+                            {
+                            "ItemID": "(O)335" //Iron Bar
+                            }
+                        ],
+                        "MinutesUntilReady": 60
+                    },
+                    {
+                        "Id": "Alternator_CopperBar",
+                        "Triggers": [
+                            {    
+                            "Id": "ItemPlacedInMachine",
+                            "Trigger": "ItemPlacedInMachine",
+                            "RequiredItemID": "{{ModID}}.PulvCopper"
+                            }
+                        ],
+                        "OutputItem": [
+                            {
+                            "ItemID": "(O)334" //Copper Bar
+                            }
+                        ],
+                        "MinutesUntilReady": 20
+                    },
+                    {
+                        "Id": "Alternator_RefinedQuartz",
+                        "Triggers": [
+                            {    
+                            "Id": "ItemPlacedInMachine",
+                            "Trigger": "ItemPlacedInMachine",
+                            "RequiredItemID": "{{ModID}}.PulvQuartz"
+                            }
+                        ],
+                        "OutputItem": [
+                            {
+                            "ItemID": "(O)338" //Refined Quartz
+                            }
+                        ],
+                        "MinutesUntilReady": 40
+                    },
+                    {
+                        "Id": "Alternator_ChroBar",
+                        "Triggers": [
+                            {    
+                            "Id": "ItemPlacedInMachine",
+                            "Trigger": "ItemPlacedInMachine",
+                            "RequiredItemID": "{{ModID}}.ChroCompound"
+                            }
+                        ],
+                        "OutputItem": [
+                            {
+                            "ItemID": "{{ModID}}.ChroBar" //Chromium Bar
+                            }
+                        ],
+                        "MinutesUntilReady": 480
+                    },
+                    {
+                        "Id": "Alternator_RadioactiveBar",
+                        "Triggers": [
+                            {    
+                            "Id": "ItemPlacedInMachine",
+                            "Trigger": "ItemPlacedInMachine",
+                            "RequiredItemID": "{{ModID}}.PulvRadioactive"
+                            }
+                        ],
+                        "OutputItem": [
+                            {
+                            "ItemID": "(O)910" //Radioactive Bar
+                            }
+                        ],
+                        "MinutesUntilReady": 300
+                    }
+                    // {
+                    //     "Id": "Alternator_PrisShard",
+                    //     "Triggers": [
+                    //         {    
+                    //         "Id": "ItemPlacedInMachine",
+                    //         "Trigger": "ItemPlacedInMachine",
+                    //         "RequiredItemID": "{{ModID}}.PulvPris"
+                    //         }
+                    //     ],
+                    //     "OutputItem": [
+                    //         {
+                    //         "ItemID": "(O)74" //Prismatic Shard
+                    //         }
+                    //     ],
+                    //     "MinutesUntilReady": 300
+                    // }
+                    ],
+                    "LoadEffects": [
+                        {
+                            "Id": "Default",
+                            "Frames": [2,3,4,5,6],
+                            "Interval": 60
+                        }
+                    ],
+                    "WorkingEffects": [
+                        {
+                            "Id": "Default",
+                            "Frames": [2,3,4,5,6],
+                            "Interval": 60
+                        }
+                    ],
+                    "InvalidItemMessage": "[LocalizedText Strings\\BigCraftables:{{ModID}}_Alternator_InvalidItem]",
+                    "WobbleWhileWorking": false,
+                    "WorkingEffectChance": 1.0,
+                    "ShowNextIndexWhenReady": true
+                },
+                "(BC){{ModID}}.CeramicKiln": {
+                    "OutputRules": [
+                        {
+                            "Id": "Default_Brick",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "330", //Clay
+                                "RequiredCount": 5
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O){{ModID}}.Brick", //Brick
+                                "MinStack": 15
+                                }
+                            ],
+                            "MinutesUntilReady": 20
+                        }
+                    ],
+                    "AdditionalConsumedItems": [
+                        {
+                            "ItemId": "(O)382"
+                        }
+                    ],
+                    "LoadEffects": [
+                        {
+                            "Id": "Default",
+                            "Frames": [1,2,3,4,5]
+                        }
+                    ],
+                    "WorkingEffects": [
+                        {
+                            "Id": "Default",
+                            "Frames": [1,2,3,4,5]
+                        }
+                    ],
+                    "InvalidCountMessage": "[LocalizedText Strings\\BigCraftables:{{ModID}}_CeramicKiln_InvalidCount]",
+                    "WobbleWhileWorking": false,
+                    "WorkingEffectChance": 1.0
+                },
+                "(BC){{ModID}}.CombustionGenerator": {
+                    "OutputRules": [
+                        {
+                            "Id": "Void_Battery",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "769",
+                                "RequiredCount": 1,
+                                "Condition": "{{G256.IR.Code/NewCombustionGen}}"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)787",
+                                "CustomData": {
+                                    "selph.ExtraMachineConfig.RequirementId.1": "(O)382",
+                                    "selph.ExtraMachineConfig.RequirementCount.1": "1",
+                                    "selph.ExtraMachineConfig.RequirementInvalidMsg": "[LocalizedText Strings\\BigCraftables:{{ModID}}_CombustionGenerator_InvalidCountAdditional]"
+                                }
+                                }
+                            ],
+                            "MinutesUntilReady": 480
+                        },
+                        {
+                            "Id": "Solar_Battery",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "768",
+                                "RequiredCount": 1,
+                                "Condition": "{{G256.IR.Code/NewCombustionGen}}"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)787",
+                                "CustomData": {
+                                    "selph.ExtraMachineConfig.RequirementId.1": "(O)382",
+                                    "selph.ExtraMachineConfig.RequirementCount.1": "1",
+                                    "selph.ExtraMachineConfig.RequirementInvalidMsg": "[LocalizedText Strings\\BigCraftables:{{ModID}}_CombustionGenerator_InvalidCountAdditional]"
+                                }
+                                }
+                            ],
+                            "MinutesUntilReady": 600
+                        },
+                        {
+                            "Id": "Coal_Battery",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "382",
+                                "RequiredCount": 2,
+                                "Condition": "{{G256.IR.Code/NewCombustionGen}}"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)787",
+                                "CustomData": {
+                                    "selph.ExtraMachineConfig.RequirementId.1": "(O)382",
+                                    "selph.ExtraMachineConfig.RequirementCount.1": "1",
+                                    "selph.ExtraMachineConfig.RequirementInvalidMsg": "[LocalizedText Strings\\BigCraftables:{{ModID}}_CombustionGenerator_InvalidCountAdditional]"
+                                }
+                                }
+                            ],
+                            "MinutesUntilReady": 720
+                        },
+                        {
+                            "Id": "Solar_Battery",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "768",
+                                "RequiredCount": 1,
+                                "Condition": "{{G256.IR.Code/NewCombustionGen}}"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)787",
+                                "CustomData": {
+                                    "selph.ExtraMachineConfig.RequirementId.1": "(O)382",
+                                    "selph.ExtraMachineConfig.RequirementCount.1": "1",
+                                    "selph.ExtraMachineConfig.RequirementInvalidMsg": "[LocalizedText Strings\\BigCraftables:{{ModID}}_CombustionGenerator_InvalidCountAdditional]"
+                                }
+                                }
+                            ],
+                            "MinutesUntilReady": 600
+                        },
+                        {
+                            "Id": "Coal_Battery_Old",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "382",
+                                "RequiredCount": 3,
+                                "Condition": "!{{G256.IR.Code/NewCombustionGen}}"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)787"
+                                }
+                            ],
+                            "MinutesUntilReady": 720
+                        },
+                        {
+                            "Id": "SolarVoid_Battery_Old",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "768",
+                                "RequiredCount": 1,
+                                "Condition": "!{{G256.IR.Code/NewCombustionGen}}"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)787",
+                                "MinStack": 3,
+                                "CustomData": {
+                                    "selph.ExtraMachineConfig.RequirementId.1": "(O)769",
+                                    "selph.ExtraMachineConfig.RequirementCount.1": "1",
+                                    "selph.ExtraMachineConfig.RequirementInvalidMsg": "[LocalizedText Strings\\BigCraftables:{{ModID}}_CombustionGenerator_InvalidCountOld]"
+                                }
+                                }
+                            ],
+                            "MinutesUntilReady": 1440
+                        },
+                        {
+                            "Id": "VoidSolar_Battery_Old",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "769",
+                                "RequiredCount": 1,
+                                "Condition": "!{{G256.IR.Code/NewCombustionGen}}"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)787",
+                                "MinStack": 3,
+                                "CustomData": {
+                                    "selph.ExtraMachineConfig.RequirementId.1": "(O)768",
+                                    "selph.ExtraMachineConfig.RequirementCount.1": "1",
+                                    "selph.ExtraMachineConfig.RequirementInvalidMsg": "[LocalizedText Strings\\BigCraftables:{{ModID}}_CombustionGenerator_InvalidCountOld]"
+                                }
+                                }
+                            ],
+                            "MinutesUntilReady": 1440
+                        }
+                    ],
+                    "AdditionalConsumedItems": null,
+                    "LoadEffects": [
+                        {
+                            "Id": "Default",
+                            "Frames": [2,3,4,5,6],
+                            "Interval": 60
+                        }
+                    ],
+                    "WorkingEffects": [
+                        {
+                            "Id": "Default",
+                            "Frames": [2,3,4,5,6],
+                            "Interval": 60
+                        }
+                    ],
+                    "InvalidCountMessage": "[LocalizedText Strings\\BigCraftables:{{ModID}}_CombustionGenerator_InvalidCount]",
+                    "WobbleWhileWorking": false,
+                    "WorkingEffectChance": 1.0,
+                    "ShowNextIndexWhenReady": true
+                },
+                "(BC){{ModID}}.JColaGenerator": {
+                    "OutputRules": [
+                        {
+                            "Id": "Default_Battery",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "167",
+                                "RequiredCount": 10
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)787" //
+                                }
+                            ],
+                            "MinutesUntilReady": 360
+                        }
+                    ],
+                    "LoadEffects": [
+                        {
+                            "Id": "Default",
+                            "Frames": [2,3,4,5,6,7,8,9],
+                            "Interval": 80
+                        }
+                    ],
+                    "WorkingEffects": [
+                        {
+                            "Id": "Default",
+                            "Frames": [2,3,4,5,6,7,8,9],
+                            "Interval": 80
+                        }
+                    ],
+                    "InvalidCountMessage": "[LocalizedText Strings\\BigCraftables:{{ModID}}_JColaGenerator_InvalidCount]",
+                    "WobbleWhileWorking": false,
+                    "WorkingEffectChance": 1.0,
+                    "ShowNextIndexWhenReady": true
+                },
+                "(BC){{ModID}}.EFurnace": {
+                    "OutputRules": [
+                        {
+                            "Id": "Pulverized_IridiumBar",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "{{ModID}}.PulvIridium"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)337" //Iridium Bar
+                                }
+                            ],
+                            "MinutesUntilReady": 240
+                        },
+                        {
+                            "Id": "Pulverized_GoldBar",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "{{ModID}}.PulvGold"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)336" //Gold Bar
+                                }
+                            ],
+                            "MinutesUntilReady": 150
+                        },
+                        {
+                            "Id": "Pulverized_IronBar",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "{{ModID}}.PulvIron"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)335" //Iron Bar
+                                }
+                            ],
+                            "MinutesUntilReady": 60
+                        },
+                        {
+                            "Id": "Pulverized_CopperBar",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "{{ModID}}.PulvCopper"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)334" //Copper Bar
+                                }
+                            ],
+                            "MinutesUntilReady": 20
+                        },
+                        {
+                            "Id": "Pulverized_RefinedQuartz",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "{{ModID}}.PulvQuartz"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)338" //Refined Quartz
+                                }
+                            ],
+                            "MinutesUntilReady": 40
+                        },
+                        {
+                            "Id": "Default_ChroBar",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "{{ModID}}.ChroCompound"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "{{ModID}}.ChroBar" //Chromium Bar
+                                }
+                            ],
+                            "MinutesUntilReady": 480
+                        },
+                        {
+                            "Id": "Pulverized_RadioactiveBar",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "{{ModID}}.PulvRadioactive"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)910" //Radioactive Bar
+                                }
+                            ],
+                            "MinutesUntilReady": 280
+                        },
+                        // {
+                        //     "Id": "Pulverized_PrisShard",
+                        //     "Triggers": [
+                        //         {    
+                        //         "Id": "ItemPlacedInMachine",
+                        //         "Trigger": "ItemPlacedInMachine",
+                        //         "RequiredItemID": "{{ModID}}.PulvPris"
+                        //         }
+                        //     ],
+                        //     "OutputItem": [
+                        //         {
+                        //         "ItemID": "(O)74" //Prismatic Shard
+                        //         }
+                        //     ],
+                        //     "MinutesUntilReady": 280
+                        // },
+                        {
+                            "Id": "Default_IridiumBar",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "386",
+                                "RequiredCount": 5
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)337" //Iridium Bar
+                                }
+                            ],
+                            "MinutesUntilReady": 240
+                        },
+                        {
+                            "Id": "Default_GoldBar",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "384",
+                                "RequiredCount": 5
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)336" //Gold Bar
+                                }
+                            ],
+                            "MinutesUntilReady": 150
+                        },
+                        {
+                            "Id": "Default_IronBar",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "380",
+                                "RequiredCount": 5
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)335" //Iron Bar
+                                }
+                            ],
+                            "MinutesUntilReady": 60
+                        },
+                        {
+                            "Id": "Default_CopperBar",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "378",
+                                "RequiredCount": 5
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)334" //Copper Bar
+                                }
+                            ],
+                            "MinutesUntilReady": 20
+                        },
+                        {
+                            "Id": "Default_QuartzRefined",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "80"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)338" //Refined Quartz
+                                }
+                            ],
+                            "MinutesUntilReady": 40
+                        },
+                        {
+                            "Id": "Default_FireQuartzRefined",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "82"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)338", //Refined Quartz
+                                "MinStack": 3,
+                                "MaxStack": 3
+                                }
+                            ],
+                            "MinutesUntilReady": 40
+                        },
+                        {
+                            "Id": "Default_RadioactiveBar",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "909",
+                                "RequiredCount": 5
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)910" //Radioactive Bar
+                                }
+                            ],
+                            "MinutesUntilReady": 280
+                        },
+                        {
+                            "Id": "Default_WiltedBouquet",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "458"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)277" //Witled Bouquet
+                                }
+                            ]
+                        }
+                    ],
+                    "LoadEffects": [
+                        {
+                            "Id": "Default",
+                            "Frames": [2,3,4,5,6]
+                        }
+                    ],
+                    "WorkingEffects": [
+                        {
+                            "Id": "Default",
+                            "Frames": [2,3,4,5,6]
+                        }
+                    ],
+                    "InvalidCountMessage": "[LocalizedText Strings\\BigCraftables:{{ModID}}_Default_InvalidCount]",
+                    "WobbleWhileWorking": false,
+                    "WorkingEffectChance": 1.0,
+                    "ShowNextIndexWhenReady": true
+                },
+                "(BC){{ModID}}.ChromiumFurnace": {
+                    "OutputRules": [
+                        {
+                            "Id": "Pulverized_IridiumBar",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "{{ModID}}.PulvIridium"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)337", //Iridium Bar
+                                "MinStack": 2
+                                }
+                            ],
+                            "MinutesUntilReady": 120
+                        },
+                        {
+                            "Id": "Pulverized_GoldBar",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "{{ModID}}.PulvGold"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)336", //Gold Bar
+                                "MinStack": 2
+                                }
+                            ],
+                            "MinutesUntilReady": 80
+                        },
+                        {
+                            "Id": "Pulverized_IronBar",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "{{ModID}}.PulvIron"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)335", //Iron Bar
+                                "MinStack": 2
+                                }
+                            ],
+                            "MinutesUntilReady": 30
+                        },
+                        {
+                            "Id": "Pulverized_CopperBar",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "{{ModID}}.PulvCopper"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)334", //Copper Bar
+                                "MinStack": 2
+                                }
+                            ],
+                            "MinutesUntilReady": 10
+                        },
+                        {
+                            "Id": "Pulverized_RefinedQuartz",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "{{ModID}}.PulvQuartz"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)338", //Refined Quartz
+                                "MinStack": 2
+                                }
+                            ],
+                            "MinutesUntilReady": 20
+                        },
+                        {
+                            "Id": "Default_ChroBar",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "{{ModID}}.ChroCompound"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "{{ModID}}.ChroBar", //Chromium Bar
+                                "MinStack": 2
+                                }
+                            ],
+                            "MinutesUntilReady": 240
+                        },
+                        {
+                            "Id": "Pulverized_RadioactiveBar",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "{{ModID}}.PulvRadioactive"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)910", //Radioactive Bar
+                                "MinStack": 2
+                                }
+                            ],
+                            "MinutesUntilReady": 140
+                        },
+                        // {
+                        //     "Id": "Pulverized_PrisShard",
+                        //     "Triggers": [
+                        //         {    
+                        //         "Id": "ItemPlacedInMachine",
+                        //         "Trigger": "ItemPlacedInMachine",
+                        //         "RequiredItemID": "{{ModID}}.PulvPris"
+                        //         }
+                        //     ],
+                        //     "OutputItem": [
+                        //         {
+                        //         "ItemID": "(O)74", //Prismatic Shard
+                        //         "MinStack": 2
+                        //         }
+                        //     ],
+                        //     "MinutesUntilReady": 140
+                        // },
+                        {
+                            "Id": "Default_IridiumBar",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "386",
+                                "RequiredCount": 5,
+                                "Condition": "{{G256.IR.Code/UseOres}}"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)337", //Iridium Bar
+                                "MinStack": 2
+                                }
+                            ],
+                            "MinutesUntilReady": 120
+                        },
+                        {
+                            "Id": "Default_GoldBar",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "384",
+                                "RequiredCount": 5,
+                                "Condition": "{{G256.IR.Code/UseOres}}"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)336", //Gold Bar
+                                "MinStack": 2
+                                }
+                            ],
+                            "MinutesUntilReady": 80
+                        },
+                        {
+                            "Id": "Default_IronBar",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "380",
+                                "RequiredCount": 5,
+                                "Condition": "{{G256.IR.Code/UseOres}}"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)335", //Iron Bar
+                                "MinStack": 2
+                                }
+                            ],
+                            "MinutesUntilReady": 30
+                        },
+                        {
+                            "Id": "Default_CopperBar",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "378",
+                                "RequiredCount": 5,
+                                "Condition": "{{G256.IR.Code/UseOres}}"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)334", //Copper Bar
+                                "MinStack": 2
+                                }
+                            ],
+                            "MinutesUntilReady": 10
+                        },
+                        {
+                            "Id": "Default_QuartzRefined",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "80",
+                                "Condition": "{{G256.IR.Code/UseOres}}"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)338", //Refined Quartz
+                                "MinStack": 2
+                                }
+                            ],
+                            "MinutesUntilReady": 20
+                        },
+                        {
+                            "Id": "Default_FireQuartzRefined",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "82",
+                                "Condition": "{{G256.IR.Code/UseOres}}"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)338", //Refined Quartz
+                                "MinStack": 6,
+                                "MaxStack": 6
+                                }
+                            ],
+                            "MinutesUntilReady": 20
+                        },
+                        {
+                            "Id": "Default_RadioactiveBar",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "909",
+                                "RequiredCount": 5,
+                                "Condition": "{{G256.IR.Code/UseOres}}"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)910", //Radioactive Bar
+                                "MinStack": 2
+                                }
+                            ],
+                            "MinutesUntilReady": 140
+                        },
+                        {
+                            "Id": "Default_WiltedBouquet",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "458"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)277" //Witled Bouquet
+                                }
+                            ]
+                        }
+                    ],
+                    "LoadEffects": [
+                        {
+                            "Id": "Default",
+                            "Frames": [2,3,4,5,6],
+                            "Interval": 60
+                        }
+                    ],
+                    "WorkingEffects": [
+                        {
+                            "Id": "Default",
+                            "Frames": [2,3,4,5,6],
+                            "Interval": 60
+                        }
+                    ],
+                    "InvalidCountMessage": "[LocalizedText Strings\\BigCraftables:{{ModID}}_Default_InvalidCount]",
+                    "WobbleWhileWorking": false,
+                    "WorkingEffectChance": 1.0,
+                    "ShowNextIndexWhenReady": true
+                },
+                "(BC){{ModID}}.Pulverizer": {
+                    "OutputRules": [
+                        {
+                            "Id": "Default_PulvRadioactive",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "909",
+                                "RequiredCount": 5
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O){{ModID}}.PulvRadioactive", //Radioactive
+                                "MinStack": 2,
+                                "MaxStack": 2
+                                }
+                            ],
+                            "MinutesUntilReady": 100
+                        },
+                        {
+                            "Id": "Default_PulvIridium",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "386",
+                                "RequiredCount": 5
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O){{ModID}}.PulvIridium", //Iridium
+                                "MinStack": 2,
+                                "MaxStack": 2
+                                }
+                            ],
+                            "MinutesUntilReady": 80
+                        },
+                        {
+                            "Id": "Default_PulvGold",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "384",
+                                "RequiredCount": 5
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O){{ModID}}.PulvGold", //Gold
+                                "MinStack": 2,
+                                "MaxStack": 2
+                                }
+                            ],
+                            "MinutesUntilReady": 50
+                        },
+                        {
+                            "Id": "Default_PulvIron",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "380",
+                                "RequiredCount": 5
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O){{ModID}}.PulvIron", //Iron
+                                "MinStack": 2,
+                                "MaxStack": 2
+                                }
+                            ],
+                            "MinutesUntilReady": 30
+                        },
+                        {
+                            "Id": "Default_PulvCopper",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "378",
+                                "RequiredCount": 5
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O){{ModID}}.PulvCopper", //Copper
+                                "MinStack": 2,
+                                "MaxStack": 2
+                                }
+                            ],
+                            "MinutesUntilReady": 10
+                        },
+                        {
+                            "Id": "Quartz_PulvQuartz",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "80"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O){{ModID}}.PulvQuartz", //Quartz
+                                "MinStack": 2,
+                                "MaxStack": 2
+                                }
+                            ],
+                            "MinutesUntilReady": 10
+                        },
+                        {
+                            "Id": "Fire_PulvQuartz",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "82"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O){{ModID}}.PulvQuartz", //Fire Quartz
+                                "MinStack": 6,
+                                "MaxStack": 6
+                                }
+                            ],
+                            "MinutesUntilReady": 10
+                        },
+                        {
+                            "Id": "Default_PulvPris",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "74",
+                                "RequiredCount": 1
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O){{ModID}}.PulvPris", //Prismatic
+                                "MinStack": 20,
+                                "MaxStack": 20
+                                }
+                            ],
+                            "MinutesUntilReady": 60
+                        }
+                    ],
+                    "LoadEffects": [
+                        {
+                            "Id": "Default",
+                            "Frames": [1,2,3,4,5]
+                        }
+                    ],
+                    "WorkingEffects": [
+                        {
+                            "Id": "Default",
+                            "Frames": [1,2,3,4,5]
+                        }
+                    ],
+                    "InvalidCountMessage": "[LocalizedText Strings\\BigCraftables:{{ModID}}_Default_InvalidCount]",
+                    "WobbleWhileWorking": false,
+                    "WorkingEffectChance": 1.0
+                },
+                "(BC){{ModID}}.GemPolisher": {
+                    "OutputRules": [
+                        {
+                            "Id": "Default_Gems",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredTags": [
+                                    "category_gem"
+                                    ],
+                                "Condition": "!ITEM_QUALITY Input 4 4"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "OutputMethod": "IndustrializationRedux.ModEntry, IndustrializationRedux: OutputGemPolisher"
+                                }
+                            ]
+                        }
+                    ],
+                    "LoadEffects": [
+                        {
+                            "Id": "Default",
+                            "Sounds": [
+                              {
+                                "Id": "Ship",
+                                "Delay": 0
+                              }
+                            ],
+                            "Frames": [1,2,3,4,5,6]
+                        }
+                    ],
+                    "WorkingEffects": [
+                        {
+                            "Id": "Default",
+                            "Frames": [1,2,3,4,5,6]
+                        }
+                    ],
+                    "WobbleWhileWorking": false,
+                    "WorkingEffectChance": 1.0
+                },
+                "(BC){{ModID}}.MineralWasher": {
+                    "OutputRules": [
+                        {
+                            "Id": "Default_Mineral",
+                            "Triggers": [
+                                {
+                                    "Id": "ItemPlacedInMachine",
+                                    "Trigger": "ItemPlacedInMachine",
+                                    "RequiredTags": [
+                                      "category_minerals",
+                                      "!crystalarium_banned"
+                                    ],
+                                    "Condition": "!ITEM_QUALITY Input 4 4"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "DROP_IN",
+                                "Quality": 4
+                                }
+                            ],
+                            "MinutesUntilReady": 480
+                        }
+                    ],
+                    "LoadEffects": [
+                        {
+                            "Id": "Default",
+                            "Sounds": [
+                              {
+                                "Id": "Ship",
+                                "Delay": 0
+                              }
+                            ],
+                            "Frames": [1,2,3,4,5,6]
+                        }
+                    ],
+                    "WorkingEffects": [
+                        {
+                            "Id": "Default",
+                            "Frames": [1,2,3,4,5,6]
+                        }
+                    ],
+                    "WobbleWhileWorking": false,
+                    "WorkingEffectChance": 1.0
+                },
+                "(BC){{ModID}}.GardenCloche": {
+                    "OutputRules": [
+                        {
+                            "Id": "Default_GardenCloche",
+                            "Triggers": [
+                                {
+                                    "Id": "ItemPlacedInMachine",
+                                    "Trigger": "ItemPlacedInMachine",
+                                    "RequiredTags": [
+                                      "category_seeds"
+                                    ],
+                                    "RequiredCount": 24
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "OutputMethod": "IndustrializationRedux.ModEntry, IndustrializationRedux: OutputGardenCloche",
+                                "IncrementMachineParentSheetIndex": 1
+                                }
+                            ]
+                        }
+                    ],
+                    "LoadEffects": [
+                        {
+                            "ID": "Default",
+                            "Sounds": [
+                              {
+                                "Id": "Ship",
+                                "Delay": 0
+                              }
+                            ]
+                        }
+                    ],
+                    "AllowFairyDust": false,
+                    "InvalidCountMessage": "[LocalizedText Strings\\BigCraftables:{{ModID}}_Cloche_InvalidCount]",
+                    "WobbleWhileWorking": false,
+                    "ShowNextIndexWhenReady": true,
+                    "WorkingEffectChance": 1.0
+                },
+                "(BC){{ModID}}.SuperGardenCloche": {
+                    "OutputRules": [
+                        {
+                            "Id": "Default_SuperGardenCloche",
+                            "Triggers": [
+                                {
+                                    "Id": "ItemPlacedInMachine",
+                                    "Trigger": "ItemPlacedInMachine",
+                                    "RequiredTags": [
+                                      "category_seeds"
+                                    ],
+                                    "RequiredCount": 480
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "OutputMethod": "IndustrializationRedux.ModEntry, IndustrializationRedux: OutputGardenCloche",
+                                "IncrementMachineParentSheetIndex": 1
+                                }
+                            ]
+                        }
+                    ],
+                    "LoadEffects": [
+                        {
+                            "Sounds": [
+                                {
+                                  "Id": "Ship",
+                                  "Delay": 0
+                                }
+                              ]
+                        }
+                    ],
+                    "AllowFairyDust": false,
+                    "InvalidCountMessage": "[LocalizedText Strings\\BigCraftables:{{ModID}}_Super_Cloche_InvalidCount]",
+                    "WobbleWhileWorking": false,
+                    "ShowNextIndexWhenReady": true,
+                    "WorkingEffectChance": 1.0
+                },
+                "(BC){{ModID}}.RockCrusher": {
+                    "OutputRules": [
+                        {
+                            "Id": "Crushed_CopperBar",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "334"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O){{ModID}}.PulvCopper"
+                                }
+                            ],
+                            "MinutesUntilReady": 30
+                        },
+                        {
+                            "Id": "Crushed_IronBar",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "335"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O){{ModID}}.PulvIron"
+                                }
+                            ],
+                            "MinutesUntilReady": 30
+                        },
+                        {
+                            "Id": "Crushed_GoldBar",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "336"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O){{ModID}}.PulvGold"
+                                }
+                            ],
+                            "MinutesUntilReady": 30
+                        },
+                        {
+                            "Id": "Crushed_IridiumBar",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "337"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O){{ModID}}.PulvIridium"
+                                }
+                            ],
+                            "MinutesUntilReady": 30
+                        },
+                        {
+                            "Id": "Crushed_RefinedQuartz",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "338"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O){{ModID}}.PulvQuartz"
+                                }
+                            ],
+                            "MinutesUntilReady": 30
+                        },
+                        {
+                            "Id": "Crushed_PrismaticShard",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "74"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O){{ModID}}.PulvPris",
+                                "MinStack": 20,
+                                "MaxStack": 20
+                                }
+                            ],
+                            "MinutesUntilReady": 60
+                        },
+                        {
+                            "Id": "Crushed_Stones",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "390",
+                                "RequiredCount": 5
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)407",
+                                "MinStack": 5
+                                },
+                                {
+                                "ItemID": "(O)378"
+                                },
+                                {
+                                "ItemID": "(O)380"
+                                },
+                                {
+                                "ItemID": "(O)382"
+                                },
+                                {
+                                "ItemID": "(O)384"
+                                }
+                            ],
+                            "MinutesUntilReady": 30
+                        },
+                        {
+                            "Id": "Crushed_Coal",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "382",
+                                "Condition": "ITEM_QUALITY Input 1 4"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "DROP_IN",
+                                "MinStack": 3,
+                                "Condition": "ITEM_QUALITY Input 4 4"
+                                },
+                                {
+                                "ItemID": "DROP_IN",
+                                "MinStack": 2,
+                                "MaxStack": 3,
+                                "Condition": "ITEM_QUALITY Input 2 2"
+                                },
+                                {
+                                "ItemID": "DROP_IN",
+                                "MinStack": 2,
+                                "Condition": "ITEM_QUALITY Input 1 1"
+                                }
+                            ],
+                            "MinutesUntilReady": 180
+                        },
+                        {
+                            "Id": "Crushed_CopperOre",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "378",
+                                "Condition": "ITEM_QUALITY Input 1 4"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "DROP_IN",
+                                "MinStack": 3,
+                                "Condition": "ITEM_QUALITY Input 4 4"
+                                },
+                                {
+                                "ItemID": "DROP_IN",
+                                "MinStack": 2,
+                                "MaxStack": 3,
+                                "Condition": "ITEM_QUALITY Input 2 2"
+                                },
+                                {
+                                "ItemID": "DROP_IN",
+                                "MinStack": 2,
+                                "Condition": "ITEM_QUALITY Input 1 1"
+                                }
+                            ],
+                            "MinutesUntilReady": 180
+                        },
+                        {
+                            "Id": "Crushed_IronOre",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "380",
+                                "Condition": "ITEM_QUALITY Input 1 4"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "DROP_IN",
+                                "MinStack": 3,
+                                "Condition": "ITEM_QUALITY Input 4 4"
+                                },
+                                {
+                                "ItemID": "DROP_IN",
+                                "MinStack": 2,
+                                "MaxStack": 3,
+                                "Condition": "ITEM_QUALITY Input 2 2"
+                                },
+                                {
+                                "ItemID": "DROP_IN",
+                                "MinStack": 2,
+                                "Condition": "ITEM_QUALITY Input 1 1"
+                                }
+                            ],
+                            "MinutesUntilReady": 180
+                        },
+                        {
+                            "Id": "Crushed_GoldOre",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "384",
+                                "Condition": "ITEM_QUALITY Input 1 4"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "DROP_IN",
+                                "MinStack": 3,
+                                "Condition": "ITEM_QUALITY Input 4 4"
+                                },
+                                {
+                                "ItemID": "DROP_IN",
+                                "MinStack": 2,
+                                "MaxStack": 3,
+                                "Condition": "ITEM_QUALITY Input 2 2"
+                                },
+                                {
+                                "ItemID": "DROP_IN",
+                                "MinStack": 2,
+                                "Condition": "ITEM_QUALITY Input 1 1"
+                                }
+                            ],
+                            "MinutesUntilReady": 180
+                        },
+                        {
+                            "Id": "Crushed_IridiumOre",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "386",
+                                "Condition": "ITEM_QUALITY Input 1 4"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "DROP_IN",
+                                "MinStack": 3,
+                                "Condition": "ITEM_QUALITY Input 4 4"
+                                },
+                                {
+                                "ItemID": "DROP_IN",
+                                "MinStack": 2,
+                                "MaxStack": 3,
+                                "Condition": "ITEM_QUALITY Input 2 2"
+                                },
+                                {
+                                "ItemID": "DROP_IN",
+                                "MinStack": 2,
+                                "Condition": "ITEM_QUALITY Input 1 1"
+                                }
+                            ],
+                            "MinutesUntilReady": 180
+                        }
+                    ],
+                    "LoadEffects": [
+                        {
+                            "Id": "Default",
+                            "Sounds": [
+                              {
+                                "Id": "Ship",
+                                "Delay": 0
+                              }
+                            ],
+                            "Frames": [1,2,3,4,5]
+                        }
+                    ],
+                    "InvalidCountMessage": "[LocalizedText Strings\\BigCraftables:{{ModID}}_Default_InvalidCount]"
+                },
+                "(BC){{ModID}}.HayBin": {
+                    "OutputRules": [
+                        {
+                            "Id": "Default",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "771"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)178"
+                                }
+                            ],
+                            "MinutesUntilReady": 120,
+                            "IncrementMachineParentSheetIndex": 1
+                        }
+                    ],
+                    "LoadEffects": [
+                        {
+                            "Id": "Default",
+                            "Sounds": [
+                              {
+                                "Id": "Ship",
+                                "Delay": 0
+                              }
+                            ]
+                        }
+                    ],
+                    "WobbleWhileWorking": false,
+                    "ShowNextIndexWhenReady": true
+                },
+                "(BC){{ModID}}.HayRehydrator": {
+                    "OutputRules": [
+                        {
+                            "Id": "Default",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "178"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)771"
+                                }
+                            ],
+                            "MinutesUntilReady": 120
+                        }
+                    ],
+                    "LoadEffects": [
+                        {
+                            "Id": "Default",
+                            "Sounds": [
+                              {
+                                "Id": "Ship",
+                                "Delay": 0
+                              }
+                            ]
+                        }
+                    ],
+                    "WobbleWhileWorking": false,
+                    "ShowNextIndexWhenReady": true
+                },
+                "(BC){{ModID}}.TreeCloche": {
+                    "OutputRules": [
+                        {
+                            "Id": "Default_TreeCloche_1",
+                            "Triggers": [
+                                {
+                                    "Id": "ItemPlacedInMachine",
+                                    "Trigger": "ItemPlacedInMachine",
+                                    "RequiredItemId": "292"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemId": "(O)388",
+                                "IncrementMachineParentSheetIndex": 1,
+                                "MinStack": 48,
+                                "MaxStack": 96
+                                }
+                            ],
+                            "MinutesUntilReady": 4320
+                        },
+                        {
+                            "Id": "Default_TreeCloche_2",
+                            "Triggers": [
+                                {
+                                    "Id": "ItemPlacedInMachine",
+                                    "Trigger": "ItemPlacedInMachine",
+                                    "RequiredItemId": "309"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemId": "(O)388",
+                                "IncrementMachineParentSheetIndex": 1,
+                                "MinStack": 48,
+                                "MaxStack": 96
+                                }
+                            ],
+                            "MinutesUntilReady": 4320
+                        },
+                        {
+                            "Id": "Default_TreeCloche_3",
+                            "Triggers": [
+                                {
+                                    "Id": "ItemPlacedInMachine",
+                                    "Trigger": "ItemPlacedInMachine",
+                                    "RequiredItemId": "310"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemId": "(O)388",
+                                "IncrementMachineParentSheetIndex": 1,
+                                "MinStack": 48,
+                                "MaxStack": 96
+                                }
+                            ],
+                            "MinutesUntilReady": 4320
+                        },
+                        {
+                            "Id": "Default_TreeCloche_3",
+                            "Triggers": [
+                                {
+                                    "Id": "ItemPlacedInMachine",
+                                    "Trigger": "ItemPlacedInMachine",
+                                    "RequiredItemId": "311"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemId": "(O)388",
+                                "IncrementMachineParentSheetIndex": 1,
+                                "MinStack": 48,
+                                "MaxStack": 96
+                                }
+                            ],
+                            "MinutesUntilReady": 4320
+                        }
+                    ],
+                    "AdditionalConsumedItems": [
+                        {
+                            "ItemId": "(O)805",
+                            "InvalidCountMessage": "[LocalizedText Strings\\BigCraftables:{{ModID}}_Cloche_InvalidCount_Additional]"
+                        }
+                    ],
+                    "LoadEffects": [
+                        {
+                            "Id": "Default",
+                            "Sounds": [
+                              {
+                                "Id": "Ship",
+                                "Delay": 0
+                              }
+                            ]
+                        }
+                    ],
+                    "AllowFairyDust": false,
+                    "WobbleWhileWorking": false,
+                    "ShowNextIndexWhenReady": true,
+                    "WorkingEffectChance": 1.0
+                },
+                "(BC){{ModID}}.IndustrialDistillery": {
+                    "OutputRules": [
+                        {
+                            "Id": "Default_Wheat",
+                            "Triggers": [
+                                {
+                                    "Id": "ItemPlacedInMachine",
+                                    "Trigger": "ItemPlacedInMachine",
+                                    "RequiredItemId": "262",
+                                    "RequiredCount": 5
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemId": "(O)346",
+                                "MinStack": 5,
+                                "CopyQuality": true
+                                }
+                            ],
+                            "MinutesUntilReady": 880
+                        },
+                        {
+                            "Id": "Default_Hops",
+                            "Triggers": [
+                                {
+                                    "Id": "ItemPlacedInMachine",
+                                    "Trigger": "ItemPlacedInMachine",
+                                    "RequiredItemId": "304",
+                                    "RequiredCount": 5
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemId": "(O)303",
+                                "MinStack": 5,
+                                "CopyQuality": true
+                                }
+                            ],
+                            "MinutesUntilReady": 1200
+                        },
+                        {
+                            "Id": "Default_TeaLeaves",
+                            "Triggers": [
+                                {
+                                    "Id": "ItemPlacedInMachine",
+                                    "Trigger": "ItemPlacedInMachine",
+                                    "RequiredItemId": "815",
+                                    "RequiredCount": 5
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemId": "(O)614",
+                                "MinStack": 5,
+                                "CopyQuality": true
+                                }
+                            ],
+                            "MinutesUntilReady": 90
+                        },
+                        {
+                            "Id": "Default_CoffeeBeans",
+                            "Triggers": [
+                                {
+                                    "Id": "ItemPlacedInMachine",
+                                    "Trigger": "ItemPlacedInMachine",
+                                    "RequiredItemId": "433",
+                                    "RequiredCount": 25
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemId": "(O)395",
+                                "MinStack": 5,
+                                "CopyQuality": true
+                                }
+                            ],
+                            "MinutesUntilReady": 60
+                        },
+                        {
+                            "Id": "Default_Honey",
+                            "Triggers": [
+                                {
+                                    "Id": "ItemPlacedInMachine",
+                                    "Trigger": "ItemPlacedInMachine",
+                                    "RequiredItemId": "340",
+                                    "RequiredCount": 5
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemId": "(O)459",
+                                "MinStack": 5,
+                                "CopyQuality": true
+                                }
+                            ],
+                            "MinutesUntilReady": 300
+                        },
+                        {
+                            "Id": "Default_Juice",
+                            "Triggers": [
+                                {
+                                    "Id": "ItemPlacedInMachine_Vegetable",
+                                    "Trigger": "ItemPlacedInMachine",
+                                    "RequiredTags": [
+                                        "category_vegetable"
+                                    ],
+                                    "RequiredCount": 5
+                                },
+                                {
+                                    "Id": "ItemPlacedInMachine_Juice",
+                                    "Trigger": "ItemPlacedInMachine",
+                                    "RequiredTags": [
+                                        "keg_juice"
+                                    ]
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemId": "FLAVORED_ITEM Juice DROP_IN_ID",
+                                "MinStack": 5,
+                                "CopyQuality": true
+                                }
+                            ],
+                            "MinutesUntilReady": 3000
+                        },
+                        {
+                            "Id": "Default_Wine",
+                            "Triggers": [
+                                {
+                                  "Id": "ItemPlacedInMachine_Fruit",
+                                  "Trigger": "ItemPlacedInMachine",
+                                  "RequiredTags": [
+                                    "category_fruits"
+                                  ],
+                                  "RequiredCount": 5
+                                },
+                                {
+                                  "Id": "ItemPlacedInMachine_Wine",
+                                  "Trigger": "ItemPlacedInMachine",
+                                  "RequiredTags": [
+                                    "keg_wine"
+                                  ]
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemId": "FLAVORED_ITEM Wine DROP_IN_ID",
+                                "MinStack": 5,
+                                "CopyQuality": true
+                                }
+                            ],
+                            "MinutesUntilReady": 5000
+                        }
+                    ],
+                    "LoadEffects": [
+                        {
+                          "Id": "Default",
+                          "Condition": null,
+                          "Sounds": [
+                            {
+                              "Id": "Ship",
+                              "Delay": 0
+                            },
+                            {
+                              "Id": "bubbles",
+                              "Delay": 0
+                            }
+                          ],
+                          "Interval": 60,
+                          "Frames": [2,3,4,5,6],
+                          "ShakeDuration": -1,
+                          "TemporarySprites": [
+                            {
+                              "Id": "Yellow",
+                              "Condition": "ANY \"ITEM_ID Target (O)346\" \"ITEM_ID Target 303\" \"ITEM_ID Target 459\"",
+                              "Texture": "TileSheets\\animations",
+                              "SourceRect": {
+                                "X": 256,
+                                "Y": 1856,
+                                "Width": 64,
+                                "Height": 128
+                              },
+                              "Interval": 80.0,
+                              "Frames": 6,
+                              "Loops": 999999,
+                              "PositionOffset": "0, -32",
+                              "Flicker": false,
+                              "Flip": false,
+                              "SortOffset": 0.0,
+                              "AlphaFade": 0.005,
+                              "Scale": 0.25,
+                              "ScaleChange": 0.0,
+                              "Rotation": 0.0,
+                              "RotationChange": 0.0,
+                              "Color": "#BFBF00BF"
+                            },
+                            {
+                              "Id": "GreenTea",
+                              "Condition": "ITEM_ID Target (O)614",
+                              "Texture": "TileSheets\\animations",
+                              "SourceRect": {
+                                "X": 256,
+                                "Y": 1856,
+                                "Width": 64,
+                                "Height": 128
+                              },
+                              "Interval": 80.0,
+                              "Frames": 6,
+                              "Loops": 999999,
+                              "PositionOffset": "0, -32",
+                              "Flicker": false,
+                              "Flip": false,
+                              "SortOffset": 0.0,
+                              "AlphaFade": 0.005,
+                              "Scale": 0.25,
+                              "ScaleChange": 0.0,
+                              "Rotation": 0.0,
+                              "RotationChange": 0.0,
+                              "Color": "#00BF00BF"
+                            },
+                            {
+                              "Id": "CoffeeBeans",
+                              "Condition": "ITEM_ID Target 395",
+                              "Texture": "TileSheets\\animations",
+                              "SourceRect": {
+                                "X": 256,
+                                "Y": 1856,
+                                "Width": 64,
+                                "Height": 128
+                              },
+                              "Interval": 80.0,
+                              "Frames": 6,
+                              "Loops": 999999,
+                              "PositionOffset": "0, -32",
+                              "Flicker": false,
+                              "Flip": false,
+                              "SortOffset": 0.0,
+                              "AlphaFade": 0.005,
+                              "Scale": 0.25,
+                              "ScaleChange": 0.0,
+                              "Rotation": 0.0,
+                              "RotationChange": 0.0,
+                              "Color": "#7E7E7EBF"
+                            },
+                            {
+                              "Id": "Wine",
+                              "Condition": "ITEM_ID Target (O)348",
+                              "Texture": "TileSheets\\animations",
+                              "SourceRect": {
+                                "X": 256,
+                                "Y": 1856,
+                                "Width": 64,
+                                "Height": 128
+                              },
+                              "Interval": 80.0,
+                              "Frames": 6,
+                              "Loops": 999999,
+                              "PositionOffset": "0, -32",
+                              "Flicker": false,
+                              "Flip": false,
+                              "SortOffset": 0.0,
+                              "AlphaFade": 0.005,
+                              "Scale": 0.25,
+                              "ScaleChange": 0.0,
+                              "Rotation": 0.0,
+                              "RotationChange": 0.0,
+                              "Color": "#ACACBBBF"
+                            },
+                            {
+                              "Id": "Default",
+                              "Condition": null,
+                              "Texture": "TileSheets\\animations",
+                              "SourceRect": {
+                                "X": 256,
+                                "Y": 1856,
+                                "Width": 64,
+                                "Height": 128
+                              },
+                              "Interval": 80.0,
+                              "Frames": 6,
+                              "Loops": 999999,
+                              "PositionOffset": "0, -32",
+                              "Flicker": false,
+                              "Flip": false,
+                              "SortOffset": 0.0,
+                              "AlphaFade": 0.005,
+                              "Scale": 0.25,
+                              "ScaleChange": 0.0,
+                              "Rotation": 0.0,
+                              "RotationChange": 0.0,
+                              "Color": "#BFBFBFBF"
+                            }
+                          ],
+                          "ShowNextIndexWhenReady": true
+                        }
+                    ],
+                    "WorkingEffects": [
+                        {
+                            "Id": "Default",
+                            "Condition": null,
+                            "Sounds": [
+                                {
+                                "Id": "bubbles",
+                                "Delay": 0
+                                }
+                            ],
+                            "Interval": 60,
+                            "Frames": [2,3,4,5,6],
+                            "ShakeDuration": -1,
+                            "TemporarySprites": [
+                            {
+                                "Id": "Wine",
+                                "Condition": "ITEM_ID Target (O)348",
+                                "Texture": "TileSheets\\animations",
+                                "SourceRect": {
+                                    "X": 256,
+                                    "Y": 1856,
+                                    "Width": 64,
+                                    "Height": 128
+                                    },
+                                "Interval": 80.0,
+                                "Frames": 6,
+                                "Loops": 999999,
+                                "PositionOffset": "0, -32",
+                                "Flicker": false,
+                                "Flip": false,
+                                "SortOffset": 0.0,
+                                "AlphaFade": 0.005,
+                                "Scale": 0.25,
+                                "ScaleChange": 0.0,
+                                "Rotation": 0.0,
+                                "RotationChange": 0.0,
+                                "Color": "#ACACBBBF"
+                                },
+                                {
+                                "Id": "Juice",
+                                "Condition": "ITEM_ID Target (O)350",
+                                "Texture": "TileSheets\\animations",
+                                "SourceRect": {
+                                    "X": 256,
+                                    "Y": 1856,
+                                    "Width": 64,
+                                    "Height": 128
+                                },
+                                "Interval": 80.0,
+                                "Frames": 6,
+                                "Loops": 999999,
+                                "PositionOffset": "0, -32",
+                                "Flicker": false,
+                                "Flip": false,
+                                "SortOffset": 0.0,
+                                "AlphaFade": 0.005,
+                                "Scale": 0.25,
+                                "ScaleChange": 0.0,
+                                "Rotation": 0.0,
+                                "RotationChange": 0.0,
+                                "Color": "#BFBFBFBF"
+                                },
+                                {
+                                "Id": "Beer",
+                                "Condition": "ITEM_ID Target (O)346",
+                                "Texture": "TileSheets\\animations",
+                                "SourceRect": {
+                                    "X": 256,
+                                    "Y": 1856,
+                                    "Width": 64,
+                                    "Height": 128
+                                },
+                                "Interval": 80.0,
+                                "Frames": 6,
+                                "Loops": 999999,
+                                "PositionOffset": "0, -32",
+                                "Flicker": false,
+                                "Flip": false,
+                                "SortOffset": 0.0,
+                                "AlphaFade": 0.005,
+                                "Scale": 0.25,
+                                "ScaleChange": 0.0,
+                                "Rotation": 0.0,
+                                "RotationChange": 0.0,
+                                "Color": "#BFBF00BF"
+                                },
+                                {
+                                "Id": "Default",
+                                "Condition": null,
+                                "Texture": "TileSheets\\animations",
+                                "SourceRect": {
+                                    "X": 256,
+                                    "Y": 1856,
+                                    "Width": 64,
+                                    "Height": 128
+                                },
+                                "Interval": 80.0,
+                                "Frames": 6,
+                                "Loops": 999999,
+                                "PositionOffset": "0, -32",
+                                "Flicker": false,
+                                "Flip": false,
+                                "SortOffset": 0.0,
+                                "AlphaFade": 0.005,
+                                "Scale": 0.25,
+                                "ScaleChange": 0.0,
+                                "Rotation": 0.0,
+                                "RotationChange": 0.0,
+                                "Color": "#7E7E7EBF"
+                                }
+                            ]
+                            }
+                        ],
+                        "ShowNextIndexWhenReady": true,
+                        "WorkingEffectChance": 0.33,
+                        "WobbleWhileWorking": false,
+                        "AllowFairyDust": true,
+                        "StatsToIncrementWhenHarvested": [
+                            {
+                            "StatName": "BeveragesMade"
+                            }
+                    ]
+                },
+                "(BC){{ModID}}.PreservativePress": {
+                    "OutputRules": [
+                        {
+                            "Id": "Default_SturgeonRoe",
+                            "Triggers": [
+                                {
+                                    "Id": "ItemPlacedInMachine",
+                                    "Trigger": "ItemPlacedInMachine",
+                                    "RequiredItemId": "812",
+                                    "RequiredTags": [
+                                        "preserve_sheet_index_698"
+                                    ],
+                                    "RequiredCount": 5
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemId": "(O)445",
+                                "MinStack": 5,
+                                "CopyQuality": true
+                                }
+                            ],
+                            "MinutesUntilReady": 3000
+                        },
+                        {
+                            "Id": "Default_Roe",
+                            "Triggers": [
+                                {
+                                    "Id": "ItemPlacedInMachine",
+                                    "Trigger": "ItemPlacedInMachine",
+                                    "RequiredItemId": "812",
+                                    "RequiredCount": 5
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemId": "FLAVORED_ITEM AgedRoe DROP_IN_ID DROP_IN_PRESERVE",
+                                "MinStack": 5,
+                                "CopyQuality": true
+                                }
+                            ],
+                            "MinutesUntilReady": 2000
+                        },
+                        {
+                            "Id": "Default_Pickled",
+                            "Triggers": [
+                                {
+                                    "Id": "ItemPlacedInMachine_Vegetable",
+                                    "Trigger": "ItemPlacedInMachine",
+                                    "RequiredTags": [
+                                        "category_vegetable"
+                                    ],
+                                    "RequiredCount": 5
+                                },
+                                {
+                                    "Id": "ItemPlacedInMachine_Juice",
+                                    "Trigger": "ItemPlacedInMachine",
+                                    "RequiredTags": [
+                                        "preserves_pickle"
+                                    ]
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemId": "FLAVORED_ITEM Pickle DROP_IN_ID",
+                                "MinStack": 5,
+                                "CopyQuality": true
+                                }
+                            ],
+                            "MinutesUntilReady": 2000
+                        },
+                        {
+                            "Id": "Default_Jelly",
+                            "Triggers": [
+                                {
+                                  "Id": "ItemPlacedInMachine_Fruit",
+                                  "Trigger": "ItemPlacedInMachine",
+                                  "RequiredTags": [
+                                    "category_fruits"
+                                  ],
+                                  "RequiredCount": 5
+                                },
+                                {
+                                  "Id": "ItemPlacedInMachine_Wine",
+                                  "Trigger": "ItemPlacedInMachine",
+                                  "RequiredTags": [
+                                    "preserves_jelly"
+                                  ]
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemId": "FLAVORED_ITEM Jelly DROP_IN_ID",
+                                "MinStack": 5,
+                                "CopyQuality": true
+                                }
+                            ],
+                            "MinutesUntilReady": 2000
+                        }
+                    ],
+                    "LoadEffects": [
+                      {
+                        "Id": "Default",
+                        "Condition": null,
+                        "Sounds": [
+                          {
+                            "Id": "Ship",
+                            "Delay": 0
+                          }
+                        ],
+                        "Interval": 60,
+                        "Frames": [2,3,4,5,6],
+                        "ShakeDuration": -1,
+                        "TemporarySprites": [
+                          {
+                            "Id": "JellyOrRoe",
+                            "Condition": "ANY \"ITEM_ID Target (O)344\" \"ITEM_ID Target (O)445\" \"ITEM_ID Target (O)447\"",
+                            "Texture": "TileSheets\\animations",
+                            "SourceRect": {
+                              "X": 256,
+                              "Y": 1856,
+                              "Width": 64,
+                              "Height": 128
+                            },
+                            "Interval": 80.0,
+                            "Frames": 6,
+                            "Loops": 999999,
+                            "PositionOffset": "0, -32",
+                            "Flicker": false,
+                            "Flip": false,
+                            "SortOffset": 0.0,
+                            "AlphaFade": 0.005,
+                            "Scale": 0.25,
+                            "ScaleChange": 0.0,
+                            "Rotation": 0.0,
+                            "RotationChange": 0.0,
+                            "Color": "#81A2ACBF"
+                          },
+                          {
+                            "Id": "Default",
+                            "Condition": null,
+                            "Texture": "TileSheets\\animations",
+                            "SourceRect": {
+                              "X": 256,
+                              "Y": 1856,
+                              "Width": 64,
+                              "Height": 128
+                            },
+                            "Interval": 80.0,
+                            "Frames": 6,
+                            "Loops": 999999,
+                            "PositionOffset": "0, -32",
+                            "Flicker": false,
+                            "Flip": false,
+                            "SortOffset": 0.0,
+                            "AlphaFade": 0.005,
+                            "Scale": 0.25,
+                            "ScaleChange": 0.0,
+                            "Rotation": 0.0,
+                            "RotationChange": 0.0,
+                            "Color": "#BFBFBFBF"
+                          }
+                        ]
+                      }
+                    ],
+                    "WorkingEffects": [
+                      {
+                        "Id": "Default",
+                        "Condition": null,
+                        "Sounds": null,
+                        "Interval": 60,
+                        "Frames": [2,3,4,5,6],
+                        "ShakeDuration": -1,
+                        "TemporarySprites": [
+                          {
+                            "Id": "Jelly",
+                            "Condition": "ITEM_ID Target (O)344",
+                            "Texture": "TileSheets\\animations",
+                            "SourceRect": {
+                              "X": 256,
+                              "Y": 1856,
+                              "Width": 64,
+                              "Height": 128
+                            },
+                            "Interval": 80.0,
+                            "Frames": 6,
+                            "Loops": 999999,
+                            "PositionOffset": "0, -32",
+                            "Flicker": false,
+                            "Flip": false,
+                            "SortOffset": 0.0,
+                            "AlphaFade": 0.005,
+                            "Scale": 0.25,
+                            "ScaleChange": 0.0,
+                            "Rotation": 0.0,
+                            "RotationChange": 0.0,
+                            "Color": "#81A2ACBF"
+                          },
+                          {
+                            "Id": "Default",
+                            "Condition": "ITEM_ID Target (O)342",
+                            "Texture": "TileSheets\\animations",
+                            "SourceRect": {
+                              "X": 256,
+                              "Y": 1856,
+                              "Width": 64,
+                              "Height": 128
+                            },
+                            "Interval": 80.0,
+                            "Frames": 6,
+                            "Loops": 999999,
+                            "PositionOffset": "0, -32",
+                            "Flicker": false,
+                            "Flip": false,
+                            "SortOffset": 0.0,
+                            "AlphaFade": 0.005,
+                            "Scale": 0.25,
+                            "ScaleChange": 0.0,
+                            "Rotation": 0.0,
+                            "RotationChange": 0.0,
+                            "Color": "#BFBFBFBF"
+                          }
+                        ]
+                      }
+                    ],
+                    "ShowNextIndexWhenReady": true,
+                    "WorkingEffectChance": 0.33,
+                    "WobbleWhileWorking": false,
+                    "StatsToIncrementWhenHarvested": [
+                        {
+                          "RequiredItemId": null,
+                          "RequiredTags": null,
+                          "StatName": "PreservesMade"
+                        }
+                    ]
+                },
+                "(BC){{ModID}}.IronSeedMaker": {
+                    "HasInput": false,
+                    "HasOutput": false,
+                    "InteractMethod": null,
+                    "OutputRules": [
+                    {
+                        "Id": "Default",
+                        "Triggers": [
+                        {
+                            "Id": "ItemPlacedInMachine",
+                            "Trigger": "ItemPlacedInMachine",
+                            "RequiredItemId": null,
+                            "RequiredTags": [
+                            "!seedmaker_banned"
+                            ],
+                            "RequiredCount": 1,
+                            "Condition": null
+                        }
+                        ],
+                        "UseFirstValidOutput": false,
+                        "OutputItem": [
+                        {
+                            "CustomData": {
+                                "SeedsAmount": 4
+                            },
+                            "OutputMethod": "IndustrializationRedux.ModEntry, IndustrializationRedux: OutputSeedMakerExpanded",
+                            "CopyColor": false,
+                            "CopyPrice": false,
+                            "CopyQuality": false,
+                            "PreserveType": null,
+                            "PreserveId": null,
+                            "IncrementMachineParentSheetIndex": 0,
+                            "PriceModifiers": null,
+                            "PriceModifierMode": "Stack",
+                            "Condition": null,
+                            "Id": "Default",
+                            "ItemId": null,
+                            "RandomItemId": null,
+                            "MaxItems": null,
+                            "MinStack": -1,
+                            "MaxStack": -1,
+                            "Quality": -1,
+                            "ObjectInternalName": null,
+                            "ObjectDisplayName": null,
+                            "ToolUpgradeLevel": -1,
+                            "IsRecipe": false,
+                            "StackModifiers": null,
+                            "StackModifierMode": "Stack",
+                            "QualityModifiers": null,
+                            "QualityModifierMode": "Stack",
+                            "ModData": null,
+                            "PerItemCondition": null
+                        }
+                        ],
+                        "MinutesUntilReady": 20,
+                        "DaysUntilReady": -1,
+                        "InvalidCountMessage": null,
+                        "RecalculateOnCollect": false
+                    }
+                    ],
+                    "PreventTimePass": null,
+                    "ReadyTimeModifiers": null,
+                    "ReadyTimeModifierMode": "Stack",
+                    "InvalidItemMessage": null,
+                    "InvalidItemMessageCondition": null,
+                    "InvalidCountMessage": null,
+                    "LoadEffects": [
+                    {
+                        "Id": "Default",
+                        "Condition": null,
+                        "Sounds": [
+                        {
+                            "Id": "Ship",
+                            "Delay": 0
+                        },
+                        {
+                            "Id": "dirtyHit",
+                            "Delay": 250
+                        }
+                        ],
+                        "Interval": 100,
+                        "Frames": null,
+                        "ShakeDuration": -1,
+                        "TemporarySprites": null
+                    }
+                    ],
+                    "WorkingEffects": null,
+                    "WorkingEffectChance": 0.33,
+                    "AllowLoadWhenFull": false,
+                    "WobbleWhileWorking": true,
+                    "LightWhileWorking": null,
+                    "ShowNextIndexWhileWorking": false,
+                    "ShowNextIndexWhenReady": false,
+                    "AllowFairyDust": true,
+                    "IsIncubator": false,
+                    "ClearContentsOvernightCondition": null,
+                    "StatsToIncrementWhenLoaded": null,
+                    "StatsToIncrementWhenHarvested": null,
+                    "ExperienceGainOnHarvest": null,
+                    "CustomFields": null
+                },
+                "(BC){{ModID}}.GoldSeedMaker": {
+                    "HasInput": false,
+                    "HasOutput": false,
+                    "InteractMethod": null,
+                    "OutputRules": [
+                    {
+                        "Id": "Default",
+                        "Triggers": [
+                        {
+                            "Id": "ItemPlacedInMachine",
+                            "Trigger": "ItemPlacedInMachine",
+                            "RequiredItemId": null,
+                            "RequiredTags": [
+                            "!seedmaker_banned"
+                            ],
+                            "RequiredCount": 1,
+                            "Condition": null
+                        }
+                        ],
+                        "UseFirstValidOutput": false,
+                        "OutputItem": [
+                        {
+                            "CustomData": {
+                                "SeedsAmount": 6
+                            },
+                            "OutputMethod": "IndustrializationRedux.ModEntry, IndustrializationRedux: OutputSeedMakerExpanded",
+                            "CopyColor": false,
+                            "CopyPrice": false,
+                            "CopyQuality": false,
+                            "PreserveType": null,
+                            "PreserveId": null,
+                            "IncrementMachineParentSheetIndex": 0,
+                            "PriceModifiers": null,
+                            "PriceModifierMode": "Stack",
+                            "Condition": null,
+                            "Id": "Default",
+                            "ItemId": null,
+                            "RandomItemId": null,
+                            "MaxItems": null,
+                            "MinStack": -1,
+                            "MaxStack": -1,
+                            "Quality": -1,
+                            "ObjectInternalName": null,
+                            "ObjectDisplayName": null,
+                            "ToolUpgradeLevel": -1,
+                            "IsRecipe": false,
+                            "StackModifiers": null,
+                            "StackModifierMode": "Stack",
+                            "QualityModifiers": null,
+                            "QualityModifierMode": "Stack",
+                            "ModData": null,
+                            "PerItemCondition": null
+                        }
+                        ],
+                        "MinutesUntilReady": 20,
+                        "DaysUntilReady": -1,
+                        "InvalidCountMessage": null,
+                        "RecalculateOnCollect": false
+                    }
+                    ],
+                    "AdditionalConsumedItems": [
+                        {
+                            "ItemId": "(O)771",
+                            "InvalidCountMessage": "[LocalizedText Strings\\BigCraftables:{{ModID}}_GoldSeedMaker_InvalidCount_Additional]"
+                        }
+                    ],
+                    "PreventTimePass": null,
+                    "ReadyTimeModifiers": null,
+                    "ReadyTimeModifierMode": "Stack",
+                    "InvalidItemMessage": null,
+                    "InvalidItemMessageCondition": null,
+                    "InvalidCountMessage": null,
+                    "LoadEffects": [
+                    {
+                        "Id": "Default",
+                        "Condition": null,
+                        "Sounds": [
+                        {
+                            "Id": "Ship",
+                            "Delay": 0
+                        },
+                        {
+                            "Id": "dirtyHit",
+                            "Delay": 250
+                        }
+                        ],
+                        "Interval": 100,
+                        "Frames": null,
+                        "ShakeDuration": -1,
+                        "TemporarySprites": null
+                    }
+                    ],
+                    "WorkingEffects": null,
+                    "WorkingEffectChance": 0.33,
+                    "AllowLoadWhenFull": false,
+                    "WobbleWhileWorking": true,
+                    "LightWhileWorking": null,
+                    "ShowNextIndexWhileWorking": false,
+                    "ShowNextIndexWhenReady": false,
+                    "AllowFairyDust": true,
+                    "IsIncubator": false,
+                    "ClearContentsOvernightCondition": null,
+                    "StatsToIncrementWhenLoaded": null,
+                    "StatsToIncrementWhenHarvested": null,
+                    "ExperienceGainOnHarvest": null,
+                    "CustomFields": null
+                },
+                "(BC){{ModID}}.IridiumSeedMaker": {
+                    "HasInput": false,
+                    "HasOutput": false,
+                    "InteractMethod": null,
+                    "OutputRules": [
+                    {
+                        "Id": "Default",
+                        "Triggers": [
+                        {
+                            "Id": "ItemPlacedInMachine",
+                            "Trigger": "ItemPlacedInMachine",
+                            "RequiredItemId": null,
+                            "RequiredTags": [
+                            "!seedmaker_banned"
+                            ],
+                            "RequiredCount": 1,
+                            "Condition": null
+                        }
+                        ],
+                        "UseFirstValidOutput": false,
+                        "OutputItem": [
+                        {
+                            "CustomData": {
+                                "SeedsAmount": 9
+                            },
+                            "OutputMethod": "IndustrializationRedux.ModEntry, IndustrializationRedux: OutputSeedMakerExpanded",
+                            "CopyColor": false,
+                            "CopyPrice": false,
+                            "CopyQuality": false,
+                            "PreserveType": null,
+                            "PreserveId": null,
+                            "IncrementMachineParentSheetIndex": 0,
+                            "PriceModifiers": null,
+                            "PriceModifierMode": "Stack",
+                            "Condition": null,
+                            "Id": "Default",
+                            "ItemId": null,
+                            "RandomItemId": null,
+                            "MaxItems": null,
+                            "MinStack": -1,
+                            "MaxStack": -1,
+                            "Quality": -1,
+                            "ObjectInternalName": null,
+                            "ObjectDisplayName": null,
+                            "ToolUpgradeLevel": -1,
+                            "IsRecipe": false,
+                            "StackModifiers": null,
+                            "StackModifierMode": "Stack",
+                            "QualityModifiers": null,
+                            "QualityModifierMode": "Stack",
+                            "ModData": null,
+                            "PerItemCondition": null
+                        }
+                        ],
+                        "MinutesUntilReady": 20,
+                        "DaysUntilReady": -1,
+                        "InvalidCountMessage": null,
+                        "RecalculateOnCollect": false
+                    }
+                    ],
+                    "AdditionalConsumedItems": [
+                        {
+                            "ItemId": "(O)771",
+                            "RequiredCount": 2,
+                            "InvalidCountMessage": "[LocalizedText Strings\\BigCraftables:{{ModID}}_IridiumSeedMaker_InvalidCount_Additional]"
+                        }
+                    ],
+                    "PreventTimePass": null,
+                    "ReadyTimeModifiers": null,
+                    "ReadyTimeModifierMode": "Stack",
+                    "InvalidItemMessage": null,
+                    "InvalidItemMessageCondition": null,
+                    "InvalidCountMessage": null,
+                    "LoadEffects": [
+                    {
+                        "Id": "Default",
+                        "Condition": null,
+                        "Sounds": [
+                        {
+                            "Id": "Ship",
+                            "Delay": 0
+                        },
+                        {
+                            "Id": "dirtyHit",
+                            "Delay": 250
+                        }
+                        ],
+                        "Interval": 100,
+                        "Frames": null,
+                        "ShakeDuration": -1,
+                        "TemporarySprites": null
+                    }
+                    ],
+                    "WorkingEffects": null,
+                    "WorkingEffectChance": 0.33,
+                    "AllowLoadWhenFull": false,
+                    "WobbleWhileWorking": true,
+                    "LightWhileWorking": null,
+                    "ShowNextIndexWhileWorking": false,
+                    "ShowNextIndexWhenReady": false,
+                    "AllowFairyDust": true,
+                    "IsIncubator": false,
+                    "ClearContentsOvernightCondition": null,
+                    "StatsToIncrementWhenLoaded": null,
+                    "StatsToIncrementWhenHarvested": null,
+                    "ExperienceGainOnHarvest": null,
+                    "CustomFields": null
+                },
+                // Added in 1.1.0
+                "(BC){{ModID}}.GasSmoker": {
+                    "HasInput": false,
+                    "HasOutput": false,
+                    "InteractMethod": null,
+                    "OutputRules": [
+                      {
+                        "Id": "SmokedFish",
+                        "Triggers": [
+                          {
+                            "Id": "ItemPlacedInMachine",
+                            "Trigger": "ItemPlacedInMachine",
+                            "RequiredItemId": null,
+                            "RequiredTags": [
+                              "category_fish"
+                            ],
+                            "RequiredCount": 5,
+                            "Condition": null
+                          }
+                        ],
+                        "UseFirstValidOutput": false,
+                        "OutputItem": [
+                          {
+                            "CustomData": null,
+                            "OutputMethod": null,
+                            "CopyColor": false,
+                            "CopyPrice": false,
+                            "CopyQuality": false,
+                            "PreserveType": null,
+                            "PreserveId": null,
+                            "IncrementMachineParentSheetIndex": 1,
+                            "PriceModifiers": null,
+                            "PriceModifierMode": "Stack",
+                            "Condition": null,
+                            "Id": "FLAVORED_ITEM SmokedFish DROP_IN_ID DROP_IN_QUALITY",
+                            "ItemId": "FLAVORED_ITEM SmokedFish DROP_IN_ID DROP_IN_QUALITY",
+                            "RandomItemId": null,
+                            "MaxItems": null,
+                            "MinStack": 5,
+                            "MaxStack": -1,
+                            "Quality": -1,
+                            "ObjectInternalName": null,
+                            "ObjectDisplayName": null,
+                            "ToolUpgradeLevel": -1,
+                            "IsRecipe": false,
+                            "StackModifiers": null,
+                            "StackModifierMode": "Stack",
+                            "QualityModifiers": null,
+                            "QualityModifierMode": "Stack",
+                            "ModData": null,
+                            "PerItemCondition": null
+                          }
+                        ],
+                        "MinutesUntilReady": 30,
+                        "DaysUntilReady": -1,
+                        "InvalidCountMessage": "[LocalizedText Strings\\BigCraftables:{{ModID}}_GasSmoker_InvalidCount]",
+                        "RecalculateOnCollect": false
+                      }
+                    ],
+                    "AdditionalConsumedItems": [],
+                    "PreventTimePass": null,
+                    "ReadyTimeModifiers": null,
+                    "ReadyTimeModifierMode": "Stack",
+                    "InvalidItemMessage": null,
+                    "InvalidItemMessageCondition": null,
+                    "InvalidCountMessage": null,
+                    "LoadEffects": [
+                      {
+                        "Id": "Default",
+                        "Condition": null,
+                        "Sounds": [
+                          {
+                            "Id": "furnace",
+                            "Delay": 0
+                          }
+                        ],
+                        "Interval": 100,
+                        "Frames": null,
+                        "ShakeDuration": -1,
+                        "TemporarySprites": null
+                      }
+                    ],
+                    "WorkingEffects": null,
+                    "WorkingEffectChance": 0.33,
+                    "AllowLoadWhenFull": false,
+                    "WobbleWhileWorking": false,
+                    "LightWhileWorking": {
+                      "Radius": 1.5,
+                      "Color": "DarkCyan"
+                    },
+                    "ShowNextIndexWhileWorking": false,
+                    "ShowNextIndexWhenReady": true,
+                    "AllowFairyDust": true,
+                    "IsIncubator": false,
+                    "ClearContentsOvernightCondition": null,
+                    "StatsToIncrementWhenLoaded": null,
+                    "StatsToIncrementWhenHarvested": null,
+                    "ExperienceGainOnHarvest": null,
+                    "CustomFields": null
+                  },
+                "(BC){{ModID}}.ChroHFurnace": {
+                    "OutputRules": [
+                        {
+                            "Id": "Pulverized_IridiumBar",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "{{ModID}}.PulvIridium",
+                                "RequiredCount": 5
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)337", //Iridium Bar
+                                "MinStack": 10,
+                                "MaxStack": 12
+                                }
+                            ],
+                            "MinutesUntilReady": 120
+                        },
+                        {
+                            "Id": "Pulverized_GoldBar",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "{{ModID}}.PulvGold",
+                                "RequiredCount": 5
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)336", //Gold Bar
+                                "MinStack": 10,
+                                "MaxStack": 12
+                                }
+                            ],
+                            "MinutesUntilReady": 80
+                        },
+                        {
+                            "Id": "Pulverized_IronBar",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "{{ModID}}.PulvIron",
+                                "RequiredCount": 5
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)335", //Iron Bar
+                                "MinStack": 10,
+                                "MaxStack": 12
+                                }
+                            ],
+                            "MinutesUntilReady": 30
+                        },
+                        {
+                            "Id": "Pulverized_CopperBar",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "{{ModID}}.PulvCopper",
+                                "RequiredCount": 5
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)334", //Copper Bar
+                                "MinStack": 10,
+                                "MaxStack": 12
+                                }
+                            ],
+                            "MinutesUntilReady": 10
+                        },
+                        {
+                            "Id": "Pulverized_RefinedQuartz",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "{{ModID}}.PulvQuartz",
+                                "RequiredCount": 5
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)338", //Refined Quartz
+                                "MinStack": 10,
+                                "MaxStack": 12
+                                }
+                            ],
+                            "MinutesUntilReady": 20
+                        },
+                        {
+                            "Id": "Default_ChroBar",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "{{ModID}}.ChroCompound",
+                                "RequiredCount": 5
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "{{ModID}}.ChroBar", //Chromium Bar
+                                "MinStack": 10,
+                                "MaxStack": 12
+                                }
+                            ],
+                            "MinutesUntilReady": 240
+                        },
+                        {
+                            "Id": "Pulverized_RadioactiveBar",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "{{ModID}}.PulvRadioactive",
+                                "RequiredCount": 5
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)910", //Radioactive Bar
+                                "MinStack": 10,
+                                "MaxStack": 12
+                                }
+                            ],
+                            "MinutesUntilReady": 140
+                        },
+                        // {
+                        //     "Id": "Pulverized_PrisShard",
+                        //     "Triggers": [
+                        //         {    
+                        //         "Id": "ItemPlacedInMachine",
+                        //         "Trigger": "ItemPlacedInMachine",
+                        //         "RequiredItemID": "{{ModID}}.PulvPris"
+                        //         }
+                        //     ],
+                        //     "OutputItem": [
+                        //         {
+                        //         "ItemID": "(O)74", //Prismatic Shard
+                        //         "MinStack": 2
+                        //         }
+                        //     ],
+                        //     "MinutesUntilReady": 140
+                        // },
+                        {
+                            "Id": "Default_IridiumBar",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "386",
+                                "RequiredCount": 25,
+                                "Condition": "{{G256.IR.Code/UseOres}}"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)337", //Iridium Bar
+                                "MinStack": 10,
+                                "MaxStack": 12
+                                }
+                            ],
+                            "MinutesUntilReady": 120
+                        },
+                        {
+                            "Id": "Default_GoldBar",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "384",
+                                "RequiredCount": 25,
+                                "Condition": "{{G256.IR.Code/UseOres}}"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)336", //Gold Bar
+                                "MinStack": 10,
+                                "MaxStack": 12
+                                }
+                            ],
+                            "MinutesUntilReady": 80
+                        },
+                        {
+                            "Id": "Default_IronBar",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "380",
+                                "RequiredCount": 25,
+                                "Condition": "{{G256.IR.Code/UseOres}}"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)335", //Iron Bar
+                                "MinStack": 10,
+                                "MaxStack": 12
+                                }
+                            ],
+                            "MinutesUntilReady": 30
+                        },
+                        {
+                            "Id": "Default_CopperBar",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "378",
+                                "RequiredCount": 25,
+                                "Condition": "{{G256.IR.Code/UseOres}}"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)334", //Copper Bar
+                                "MinStack": 10,
+                                "MaxStack": 12
+                                }
+                            ],
+                            "MinutesUntilReady": 10
+                        },
+                        {
+                            "Id": "Default_QuartzRefined",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "80",
+                                "RequiredCount": 5,
+                                "Condition": "{{G256.IR.Code/UseOres}}"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)338", //Refined Quartz
+                                "MinStack": 10,
+                                "MaxStack": 12
+                                }
+                            ],
+                            "MinutesUntilReady": 20
+                        },
+                        {
+                            "Id": "Default_FireQuartzRefined",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "82",
+                                "RequiredCount": 5,
+                                "Condition": "{{G256.IR.Code/UseOres}}"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)338", //Refined Quartz
+                                "MinStack": 30,
+                                "MaxStack": 36
+                                }
+                            ],
+                            "MinutesUntilReady": 20
+                        },
+                        {
+                            "Id": "Default_RadioactiveBar",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "909",
+                                "RequiredCount": 25,
+                                "Condition": "{{G256.IR.Code/UseOres}}"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)910", //Radioactive Bar
+                                "MinStack": 10,
+                                "MaxStack": 12
+                                }
+                            ],
+                            "MinutesUntilReady": 140
+                        },
+                        {
+                            "Id": "Default_WiltedBouquet",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredItemID": "458"
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "ItemID": "(O)277" //Witled Bouquet
+                                }
+                            ]
+                        }
+                    ],
+                    "PreventTimePass": null,
+                    "ReadyTimeModifiers": null,
+                    "ReadyTimeModifierMode": "Stack",
+                    "InvalidItemMessage": null,
+                    "InvalidItemMessageCondition": null,
+                    "InvalidCountMessage": "[LocalizedText Strings\\1_6_Strings:HeavyFurnace_ores]",
+                    
+                    "LoadEffects": [
+                        {
+                            "Id": "Default",
+                            "Frames": [2,3,4,5,6,7,8],
+                            "Interval": 60
+                        }
+                    ],
+                    "WorkingEffects": [
+                        {
+                            "Id": "Default",
+                            "Frames": [2,3,4,5,6,7,8],
+                            "Interval": 60
+                        }
+                    ],
+                    "AllowLoadWhenFull": false,
+                    "WobbleWhileWorking": false,
+                    "LightWhileWorking": {
+                      "Radius": 1.5,
+                      "Color": "GreenYellow"
+                    },
+                    "ShowNextIndexWhileWorking": false,
+                    "ShowNextIndexWhenReady": true,
+                    "AllowFairyDust": true,
+                    "IsIncubator": false,
+                    "ClearContentsOvernightCondition": null,
+                    "StatsToIncrementWhenLoaded": null,
+                    "StatsToIncrementWhenHarvested": null,
+                    "ExperienceGainOnHarvest": null,
+                    "CustomFields": null
+                },
+                "(BC){{ModID}}.FishingWell": {
+                    "OutputRules": [
+                        {
+                            "Id": "Default_Fish",
+                            "Triggers": [
+                                {    
+                                "Id": "ItemPlacedInMachine",
+                                "Trigger": "ItemPlacedInMachine",
+                                "RequiredTags": [
+                                    "category_bait"
+                                    ],
+                                "RequiredCount": 1
+                                }
+                            ],
+                            "OutputItem": [
+                                {
+                                "OutputMethod": "IndustrializationRedux.ModEntry, IndustrializationRedux: OutputFishingWell",
+                                "CustomData": {
+                                    "selph.ExtraMachineConfig.RequiredCountMax": 20
+                                }
+                                }
+                            ]
+                        }
+                    ],
+                    "WorkingEffects": null,
+                    "WorkingEffectChance": 0.33,
+                    "AllowLoadWhenFull": false,
+                    "WobbleWhileWorking": false,
+                    "LightWhileWorking": null,
+                    "ShowNextIndexWhileWorking": true,
+                    "ShowNextIndexWhenReady": false,
+                    "AllowFairyDust": true,
+                    "IsIncubator": false,
+                    "ClearContentsOvernightCondition": null,
+                    "StatsToIncrementWhenLoaded": null,
+                    "StatsToIncrementWhenHarvested": null,
+                    "ExperienceGainOnHarvest": null,
+                    "CustomFields": null
+                }
+            },
+            "When": {
+                "HasMod": "G256.IR.Code"
+            }
+        }        
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/MuseumRewards",
+            "Entries": {
+                "{{ModId}}_DonatedPrisShard": {
+                    "TargetContextTags": [
+                        {
+                            "Tag": "id_o_74",
+                            "Count": 1
+                        }
+                    ],
+                    "FlagOnCompletion": true,
+                    "RewardActions": [
+                        "AddMail All {{ModId}}.InitChromiumQuest"
+                    ]
+                }
+            }
+        }
+    ]
+}

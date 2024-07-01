@@ -1,0 +1,212 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/BigCraftables",
+            "Entries": {
+                "{{ModID}}.AlternatorEFurnace": {
+                    "Name": "Alternator E. Furnace",
+                    "DisplayName": "[LocalizedText Strings\\BigCraftables:{{ModID}}.AlternatorEFurnace_Name]",
+                    "Description": "[LocalizedText Strings\\BigCraftables:{{ModID}}.AlternatorEFurnace_Description]",
+                    "Price": 0,
+                    "Texture": "Mods\\{{ModID}}\\assets\\BigCraftables",
+                    "SpriteIndex": 0
+                },
+                "{{ModID}}.EFurnace": {
+                    "Name": "Electric Furnace",
+                    "DisplayName": "[LocalizedText Strings\\BigCraftables:{{ModID}}.EFurnace_Name]",
+                    "Description": "[LocalizedText Strings\\BigCraftables:{{ModID}}.EFurnace_Description]",
+                    "Price": 0,
+                    "Texture": "Mods\\{{ModID}}\\assets\\BigCraftables",
+                    "SpriteIndex": 66
+                },
+                "{{ModID}}.AutoMiner": {
+                    "Name": "Auto Miner",
+                    "DisplayName": "[LocalizedText Strings\\BigCraftables:{{ModID}}.AutoMiner_Name]",
+                    "Description": "[LocalizedText Strings\\BigCraftables:{{ModID}}.AutoMiner_Description]",
+                    "Price": 0,
+                    "CanBePlacedIndoors": "False",
+                    "Texture": "Mods\\{{ModID}}\\assets\\BigCraftables",
+                    "SpriteIndex": 11
+                },
+                "{{ModID}}.CeramicKiln": {
+                    "Name": "Ceramic Kiln",
+                    "DisplayName": "[LocalizedText Strings\\BigCraftables:{{ModID}}.CeramicKiln_Name]",
+                    "Description": "[LocalizedText Strings\\BigCraftables:{{ModID}}.CeramicKiln_Description]",
+                    "Price": 0,
+                    "Texture": "Mods\\{{ModID}}\\assets\\BigCraftables",
+                    "SpriteIndex": 22
+                },
+                "{{ModID}}.ChromiumFurnace": {
+                    "Name": "Chromium Furnace",
+                    "DisplayName": "[LocalizedText Strings\\BigCraftables:{{ModID}}.ChromiumFurnace_Name]",
+                    "Description": "[LocalizedText Strings\\BigCraftables:{{ModID}}.ChromiumFurnace_Description]",
+                    "Price": 0,
+                    "Texture": "Mods\\{{ModID}}\\assets\\BigCraftables",
+                    "SpriteIndex": 33
+                },
+                "{{ModID}}.CombustionGenerator": {
+                    "Name": "Combustion Generator",
+                    "DisplayName": "[LocalizedText Strings\\BigCraftables:{{ModID}}.CombustionGenerator_Name]",
+                    "Description": "[LocalizedText Strings\\BigCraftables:{{ModID}}.CombustionGenerator_Description]",
+                    "Price": 0,
+                    "Texture": "Mods\\{{ModID}}\\assets\\BigCraftables",
+                    "SpriteIndex": 44
+                },
+                "{{ModID}}.CombustionMiner": {
+                    "Name": "Combustion Miner",
+                    "DisplayName": "[LocalizedText Strings\\BigCraftables:{{ModID}}.CombustionMiner_Name]",
+                    "Description": "[LocalizedText Strings\\BigCraftables:{{ModID}}.CombustionMiner_Description]",
+                    "Price": 0,
+                    "CanBePlacedIndoors": "False",
+                    "Texture": "Mods\\{{ModID}}\\assets\\BigCraftables",
+                    "SpriteIndex": 55
+                },
+                "{{ModID}}.GardenCloche": {
+                    "Name": "Garden Cloche",
+                    "DisplayName": "[LocalizedText Strings\\BigCraftables:{{ModID}}.GardenCloche_Name]",
+                    "Description": "[LocalizedText Strings\\BigCraftables:{{ModID}}.GardenCloche_Description]",
+                    "Price": 0,
+                    "Texture": "Mods\\{{ModID}}\\assets\\BigCraftables",
+                    "SpriteIndex": 77
+                },
+                "{{ModID}}.GemPolisher": {
+                    "Name": "Gem Polisher",
+                    "DisplayName": "[LocalizedText Strings\\BigCraftables:{{ModID}}.GemPolisher_Name]",
+                    "Description": "[LocalizedText Strings\\BigCraftables:{{ModID}}.GemPolisher_Description]",
+                    "Price": 0,
+                    "Texture": "Mods\\{{ModID}}\\assets\\BigCraftables",
+                    "SpriteIndex": 88
+                },
+                "{{ModID}}.HayBin": {
+                    "Name": "Hay Bin",
+                    "DisplayName": "[LocalizedText Strings\\BigCraftables:{{ModID}}.HayBin_Name]",
+                    "Description": "[LocalizedText Strings\\BigCraftables:{{ModID}}.HayBin_Description]",
+                    "Price": 0,
+                    "Texture": "Mods\\{{ModID}}\\assets\\BigCraftables",
+                    "SpriteIndex": 99
+                },
+                "{{ModID}}.HayRehydrator": {
+                    "Name": "Hay Rehydrator",
+                    "DisplayName": "[LocalizedText Strings\\BigCraftables:{{ModID}}.HayRehydrator_Name]",
+                    "Description": "[LocalizedText Strings\\BigCraftables:{{ModID}}.HayRehydrator_Description]",
+                    "Price": 0,
+                    "Texture": "Mods\\{{ModID}}\\assets\\BigCraftables",
+                    "SpriteIndex": 110
+                },
+                "{{ModID}}.IndustrialDistillery": {
+                    "Name": "Industrial Distillery",
+                    "DisplayName": "[LocalizedText Strings\\BigCraftables:{{ModID}}.IndustrialDistillery_Name]",
+                    "Description": "[LocalizedText Strings\\BigCraftables:{{ModID}}.IndustrialDistillery_Description]",
+                    "Price": 0,
+                    "Texture": "Mods\\{{ModID}}\\assets\\BigCraftables",
+                    "SpriteIndex": 121
+                },
+                "{{ModID}}.JColaGenerator": {
+                    "Name": "JojaCola Generator",
+                    "DisplayName": "[LocalizedText Strings\\BigCraftables:{{ModID}}.JColaGenerator_Name]",
+                    "Description": "[LocalizedText Strings\\BigCraftables:{{ModID}}.JColaGenerator_Description]",
+                    "Price": 0,
+                    "Texture": "Mods\\{{ModID}}\\assets\\BigCraftables",
+                    "SpriteIndex": 132
+                },
+                "{{ModID}}.MineralWasher": {
+                    "Name": "Mineral Washer",
+                    "DisplayName": "[LocalizedText Strings\\BigCraftables:{{ModID}}.MineralWasher_Name]",
+                    "Description": "[LocalizedText Strings\\BigCraftables:{{ModID}}.MineralWasher_Description]",
+                    "Price": 0,
+                    "Texture": "Mods\\{{ModID}}\\assets\\BigCraftables",
+                    "SpriteIndex": 143
+                },
+                "{{ModID}}.PreservativePress": {
+                    "Name": "Preservative Press",
+                    "DisplayName": "[LocalizedText Strings\\BigCraftables:{{ModID}}.PreservativePress_Name]",
+                    "Description": "[LocalizedText Strings\\BigCraftables:{{ModID}}.PreservativePress_Description]",
+                    "Price": 0,
+                    "Texture": "Mods\\{{ModID}}\\assets\\BigCraftables",
+                    "SpriteIndex": 154
+                },
+                "{{ModID}}.Pulverizer": {
+                    "Name": "Pulverizer",
+                    "DisplayName": "[LocalizedText Strings\\BigCraftables:{{ModID}}.Pulverizer_Name]",
+                    "Description": "[LocalizedText Strings\\BigCraftables:{{ModID}}.Pulverizer_Description]",
+                    "Price": 0,
+                    "Texture": "Mods\\{{ModID}}\\assets\\BigCraftables",
+                    "SpriteIndex": "165"
+                },
+                "{{ModID}}.RockCrusher": {
+                    "Name": "Rock Crusher",
+                    "DisplayName": "[LocalizedText Strings\\BigCraftables:{{ModID}}.RockCrusher_Name]",
+                    "Description": "[LocalizedText Strings\\BigCraftables:{{ModID}}.RockCrusher_Description]",
+                    "Price": 0,
+                    "Texture": "Mods\\{{ModID}}\\assets\\BigCraftables",
+                    "SpriteIndex": 176
+                },
+                "{{ModID}}.SuperGardenCloche": {
+                    "Name": "Super Garden Cloche",
+                    "DisplayName": "[LocalizedText Strings\\BigCraftables:{{ModID}}.SuperGardenCloche_Name]",
+                    "Description": "[LocalizedText Strings\\BigCraftables:{{ModID}}.SuperGardenCloche_Description]",
+                    "Price": 0,
+                    "Texture": "Mods\\{{ModID}}\\assets\\BigCraftables",
+                    "SpriteIndex": 187
+                },
+                "{{ModID}}.TreeCloche": {
+                    "Name": "Tree Cloche",
+                    "DisplayName": "[LocalizedText Strings\\BigCraftables:{{ModID}}.TreeCloche_Name]",
+                    "Description": "[LocalizedText Strings\\BigCraftables:{{ModID}}.TreeCloche_Description]",
+                    "Price": 0,
+                    "Texture": "Mods\\{{ModID}}\\assets\\BigCraftables",
+                    "SpriteIndex": 198
+                },
+                "{{ModID}}.IronSeedMaker": {
+                    "Name": "Iron Seed Maker",
+                    "DisplayName": "[LocalizedText Strings\\BigCraftables:{{ModID}}.IronSeedMaker_Name]",
+                    "Description": "[LocalizedText Strings\\BigCraftables:{{ModID}}.IronSeedMaker_Description]",
+                    "Price": 0,
+                    "Texture": "Mods\\{{ModID}}\\assets\\BigCraftables",
+                    "SpriteIndex": 209
+                },
+                "{{ModID}}.GoldSeedMaker": {
+                    "Name": "Gold Seed Maker",
+                    "DisplayName": "[LocalizedText Strings\\BigCraftables:{{ModID}}.GoldSeedMaker_Name]",
+                    "Description": "[LocalizedText Strings\\BigCraftables:{{ModID}}.GoldSeedMaker_Description]",
+                    "Price": 0,
+                    "Texture": "Mods\\{{ModID}}\\assets\\BigCraftables",
+                    "SpriteIndex": 210
+                },
+                "{{ModID}}.IridiumSeedMaker": {
+                    "Name": "Iridium Seed Maker",
+                    "DisplayName": "[LocalizedText Strings\\BigCraftables:{{ModID}}.IridiumSeedMaker_Name]",
+                    "Description": "[LocalizedText Strings\\BigCraftables:{{ModID}}.IridiumSeedMaker_Description]",
+                    "Price": 0,
+                    "Texture": "Mods\\{{ModID}}\\assets\\BigCraftables",
+                    "SpriteIndex": 211
+                },
+                "{{ModID}}.GasSmoker": {
+                    "Name": "AQUA Gas Smoker",
+                    "DisplayName": "[LocalizedText Strings\\BigCraftables:{{ModID}}.GasSmoker_Name]",
+                    "Description": "[LocalizedText Strings\\BigCraftables:{{ModID}}.GasSmoker_Description]",
+                    "Price": 0,
+                    "Texture": "Mods\\{{ModID}}\\assets\\BigCraftables",
+                    "SpriteIndex": 212
+                },
+                "{{ModID}}.ChroHFurnace": {
+                    "Name": "Chromium Heavy Furnace",
+                    "DisplayName": "[LocalizedText Strings\\BigCraftables:{{ModID}}.ChroHFurnace_Name]",
+                    "Description": "[LocalizedText Strings\\BigCraftables:{{ModID}}.ChroHFurnace_Description]",
+                    "Price": 0,
+                    "Texture": "Mods\\{{ModID}}\\assets\\BigCraftables",
+                    "SpriteIndex": 220
+                },
+                "{{ModID}}.FishingWell": {
+                    "Name": "AQUA Fish Catcher",
+                    "DisplayName": "[LocalizedText Strings\\BigCraftables:{{ModID}}.FishingWell_Name]",
+                    "Description": "[LocalizedText Strings\\BigCraftables:{{ModID}}.FishingWell_Description]",
+                    "Price": 0,
+                    "Texture": "Mods\\{{ModID}}\\assets\\BigCraftables",
+                    "SpriteIndex": 215
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,81 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Strings/BigCraftables",
+            "Entries": {
+                "{{ModID}}.AlternatorEFurnace_Name": "Alternator E. Furnace",
+                "{{ModID}}.AlternatorEFurnace_Description": "This version of electric furnace allows automation control, which smelts only crushed metals.",
+                "{{ModID}}.AutoMiner_Name": "Auto Miner",
+                "{{ModID}}.AutoMiner_Description": "Very powerful automatic miner which can collect ores. Takes a full day to complete.",
+                "{{ModID}}.CeramicKiln_Name": "Ceramic Kiln",
+                "{{ModID}}.CeramicKiln_Description": "Cooks clay into Bricks, which is required by most machines.",
+                "{{ModID}}.ChromiumFurnace_Name": "Chromium Furnace",
+                "{{ModID}}.ChromiumFurnace_Description": "State of the art industrial grade furnace, smelts at 4x speed AND 2x output.\n\n(Can be configurated to take only pulverized materials.)",
+                "{{ModID}}.CombustionGenerator_Name": "Combustion Generator",
+                "{{ModID}}.CombustionGenerator_Description": "A generator that converts either 3 coal, 1 solar essence or 1 void essence into 1 battery pack.\n\nRequires 1 coal to function.",
+                "{{ModID}}.CombustionMiner_Name": "Combustion Miner",
+                "{{ModID}}.CombustionMiner_Description": "A weaker variant to the Auto Miner, takes coal as fuel.",
+                "{{ModID}}.EFurnace_Name": "Electric Furnace",
+                "{{ModID}}.EFurnace_Description": "Smelts regular and crushed ores at twice the speed, doesn't need coal to operate.",
+                "{{ModID}}.GardenCloche_Name": "Garden Cloche",
+                "{{ModID}}.GardenCloche_Description": "An extremely powerful cloche, supply it with 24 of the same seed, and in return, get iridium quality crops.",
+                "{{ModID}}.GemPolisher_Name": "Gem Polisher",
+                "{{ModID}}.GemPolisher_Description": "An exotic gem polisher, allows upgrading gems to iridium quality.",
+                "{{ModID}}.HayBin_Name": "Hay Bin",
+                "{{ModID}}.HayBin_Description": "A bin that turns fiber into hay.",
+                "{{ModID}}.HayRehydrator_Name": "Hay Rehydrator",
+                "{{ModID}}.HayRehydrator_Description": "A bin that turns hay into fiber.",
+                "{{ModID}}.IndustrialDistillery_Name": "Industrial Distillery",
+                "{{ModID}}.IndustrialDistillery_Description": "Larger more efficent keg, takes 5 of the same item, and does it at twice the speed, keeps quality and sell value increased.",
+                "{{ModID}}.JColaGenerator_Name": "Joja Cola Generator",
+                "{{ModID}}.JColaGenerator_Description": "Pierre is smart, so smart in fact that he invented a machine which uses Joja Cola as a fuel source. By adding 10 cans, you too can make 1 battery pack, I bet Morris feels envious.",
+                "{{ModID}}.MineralWasher_Name": "Mineral Washer",
+                "{{ModID}}.MineralWasher_Description": "Cleans up minerals to improve quality.",
+                "{{ModID}}.PreservativePress_Name": "Preservative Press",
+                "{{ModID}}.PreservativePress_Description": "Larger more efficent perserves jar, takes 5 of the same item, and does it at twice the speed, keeps quality and sell value increased.",
+                "{{ModID}}.Pulverizer_Name": "Pulverizer",
+                "{{ModID}}.Pulverizer_Description": "Crushing 5 ores will net you two pulverized powder, can only be used in Electric Furnaces.",
+                "{{ModID}}.RockCrusher_Name": "Rock Crusher",
+                "{{ModID}}.RockCrusher_Description": "Can break down 5 stone for a chance of ore, metal bars into pulverized metal, or higher quality ore into multiple lower quality ores.",
+                "{{ModID}}.SuperGardenCloche_Name": "Super Garden Cloche",
+                "{{ModID}}.SuperGardenCloche_Description": "A powered up version of the garden cloche, supply it with 480 of the same seed, and in return, get iridium quality crops",
+                "{{ModID}}.TreeCloche_Name": "Tree Cloche",
+                "{{ModID}}.TreeCloche_Description": "Tree nursery which grows trees faster and produces wood.",
+                "{{ModID}}.IronSeedMaker_Name": "Iron Seed Maker",
+                "{{ModID}}.IronSeedMaker_Description": "Place crops inside to produce 4 (3~5 if static amount is disabled) crop seeds. Doesn't work with fruit tree crops.",
+                "{{ModID}}.GoldSeedMaker_Name": "Gold Seed Maker",
+                "{{ModID}}.GoldSeedMaker_Description": "Place crops and a fiber inside to produce 6 (5~7 if static amount is disabled) crop seeds. Doesn't work with fruit tree crops.",
+                "{{ModID}}.IridiumSeedMaker_Name": "Iridium Seed Maker",
+                "{{ModID}}.IridiumSeedMaker_Description": "Place crops and two fiber inside to produce 9 (8~10 if static amount is disabled) crop seeds. Doesn't work with fruit tree crops.",
+                
+                //Error Messages
+                "{{ModID}}_Alternator_InvalidItem": "Alternator only accepts pulverized materials.",
+                "{{ModID}}_CeramicKiln_InvalidCount": "You need 5 clay to make brick.",
+                "{{ModID}}_CombustionGenerator_InvalidCount": "You need 3 items to produce battery pack.",
+                "{{ModID}}_JColaGenerator_InvalidCount": "You need 10 JojaCola cans to produce battery pack.",
+                "{{ModID}}_CombustionGenerator_InvalidCountAdditional": "You need 1 coal for generator to produce battery pack.",
+                "{{ModID}}_Default_InvalidCount": "Requires 5 of materials.",
+                "{{ModID}}_Cloche_InvalidCount": "Requires 24 seeds.",
+                "{{ModID}}_Super_Cloche_InvalidCount": "Requires 480 seeds.",
+                "{{ModID}}_Cloche_InvalidCount_Additional": "Requires 1 tree fertilizer.",
+                "{{ModID}}_GoldSeedMaker_InvalidCount_Additional": "Requires 1 fiber",
+                "{{ModID}}_IridiumSeedMaker_InvalidCount_Additional": "Requires 2 fiber",
+                
+                // Added in 1.1.0
+
+                "{{ModID}}.GasSmoker_Name": "AQUA Gas Smoker",
+                "{{ModID}}.GasSmoker_Description": "Place 5 fish to create 5 smoked fish, which are worth double. The quality of the fish is preserved.\n\n\"Powered by AQUA Co.\"",
+                "{{ModID}}_GasSmoker_InvalidCount": "Require 5 of the same fish.",
+                "{{ModID}}.ChroHFurnace_Name": "Chromium Heavy Furnace",
+                "{{ModID}}.ChroHFurnace_Description": "State of the art industrial grade heavy furnace, smelts 25 ores (or 5 pulverize materials) at 4x speed and 2x output.\n\n(Can be configurated to take only pulverized materials.)",
+                "{{ModID}}.FishingWell_Name": "AQUA Fish Catcher",
+                "{{ModID}}.FishingWell_Description": "Place up to 20 bait (1, 5, 10, 15 or 20) to produce a varying amount of random fish residing in that area.",
+
+                // Added in 1.2.0
+
+                "{{ModID}}_CombustionGenerator_InvalidCountOld": "You need both solar essence and void essence.",
+            }
+        }
+    ]
+}
