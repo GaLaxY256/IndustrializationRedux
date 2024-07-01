@@ -1,0 +1,123 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "Entries": {
+                "{{ModID}}.Brick": {
+                    "Name": "Brick",
+                    "DisplayName": "[LocalizedText Strings\\Objects:{{ModID}}.Brick_Name]",
+                    "Description": "[LocalizedText Strings\\Objects:{{ModID}}.Brick_Description]",
+                    "Type": "Basic",
+                    "Category": -15,
+                    "Price": 6,
+                    "Texture": "Mods\\{{ModID}}\\assets\\objects",
+                    "SpriteIndex": 0
+                },
+                "{{ModID}}.ChroBar": {
+                    "Name": "Chromium Bar",
+                    "DisplayName": "[LocalizedText Strings\\Objects:{{ModID}}.ChroBar_Name]",
+                    "Description": "[LocalizedText Strings\\Objects:{{ModID}}.ChroBar_Description]",
+                    "Type": "Basic",
+                    "Category": -15,
+                    "Price": 1500,
+                    "Texture": "Mods\\{{ModID}}\\assets\\objects",
+                    "SpriteIndex": 9
+                },
+                "{{ModID}}.ChroCompound": {
+                    "Name": "Chromium Compound",
+                    "DisplayName": "[LocalizedText Strings\\Objects:{{ModID}}.ChroCompound_Name]",
+                    "Description": "[LocalizedText Strings\\Objects:{{ModID}}.ChroCompound_Description]",
+                    "Type": "Basic",
+                    "Category": -15,
+                    "Price": 750,
+                    "Texture": "Mods\\{{ModID}}\\assets\\objects",
+                    "SpriteIndex": 7
+                },
+                "{{ModID}}.PulvCopper": {
+                    "Name": "Pulverized Copper",
+                    "DisplayName": "[LocalizedText Strings\\Objects:{{ModID}}.PulvCopper_Name]",
+                    "Description": "[LocalizedText Strings\\Objects:{{ModID}}.PulvCopper_Description]",
+                    "Type": "Basic",
+                    "Category": -15,
+                    "Price": 20,
+                    "Texture": "Mods\\{{ModID}}\\assets\\objects",
+                    "SpriteIndex": 1
+                },
+                "{{ModID}}.PulvIron": {
+                    "Name": "Pulverized Iron",
+                    "DisplayName": "[LocalizedText Strings\\Objects:{{ModID}}.PulvIron_Name]",
+                    "Description": "[LocalizedText Strings\\Objects:{{ModID}}.PulvIron_Description]",
+                    "Type": "Basic",
+                    "Category": -15,
+                    "Price": 45,
+                    "Texture": "Mods\\{{ModID}}\\assets\\objects",
+                    "SpriteIndex": 2
+                },
+                "{{ModID}}.PulvGold": {
+                    "Name": "Pulverized Gold",
+                    "DisplayName": "[LocalizedText Strings\\Objects:{{ModID}}.PulvGold_Name]",
+                    "Description": "[LocalizedText Strings\\Objects:{{ModID}}.PulvGold_Description]",
+                    "Type": "Basic",
+                    "Category": -15,
+                    "Price": 100,
+                    "Texture": "Mods\\{{ModID}}\\assets\\objects",
+                    "SpriteIndex": 3
+                },
+                "{{ModID}}.PulvIridium": {
+                    "Name": "Pulverized Iridium",
+                    "DisplayName": "[LocalizedText Strings\\Objects:{{ModID}}.PulvIridium_Name]",
+                    "Description": "[LocalizedText Strings\\Objects:{{ModID}}.PulvIridium_Description]",
+                    "Type": "Basic",
+                    "Category": -15,
+                    "Price": 450,
+                    "Texture": "Mods\\{{ModID}}\\assets\\objects",
+                    "SpriteIndex": 4
+                },
+                "{{ModID}}.PulvPris": {
+                    "Name": "Pulverized Primatic Shard",
+                    "DisplayName": "[LocalizedText Strings\\Objects:{{ModID}}.PulvPris_Name]",
+                    "Description": "[LocalizedText Strings\\Objects:{{ModID}}.PulvPris_Description]",
+                    "Type": "Crafting",
+                    "Category": -8,
+                    "Price": 90,
+                    "Texture": "Mods\\{{ModID}}\\assets\\objects",
+                    "SpriteIndex": 5
+                },
+                "{{ModID}}.PulvQuartz": {
+                    "Name": "Pulverized Quartz",
+                    "DisplayName": "[LocalizedText Strings\\Objects:{{ModID}}.PulvQuartz_Name]",
+                    "Description": "[LocalizedText Strings\\Objects:{{ModID}}.PulvQuartz_Description]",
+                    "Type": "Crafting",
+                    "Category": -8,
+                    "Price": 20,
+                    "Texture": "Mods\\{{ModID}}\\assets\\objects",
+                    "SpriteIndex": 6
+                },
+                "{{ModID}}.PulvRadioactive": {
+                    "Name": "Pulverized Radioactive Metal",
+                    "DisplayName": "[LocalizedText Strings\\Objects:{{ModID}}.PulvRadioactive_Name]",
+                    "Description": "[LocalizedText Strings\\Objects:{{ModID}}.PulvRadioactive_Description]",
+                    "Type": "Basic",
+                    "Category": -15,
+                    "Price": 600,
+                    "Texture": "Mods\\{{ModID}}\\assets\\objects",
+                    "SpriteIndex": 8
+                }
+                // "{{ModID}}.Charcoal": {
+                //     "Name": "Charcoal",
+                //     "DisplayName": "[LocalizedText Strings\\Objects:{{ModID}}.Charcoal_Name]",
+                //     "Description": "[LocalizedText Strings\\Objects:{{ModID}}.Charcoal_Description]",
+                //     "Type": "Basic",
+                //     "Category": -15,
+                //     "Price": 15,
+                //     "SpriteIndex": 388,
+                //     "Edibility": -300,
+                //     "ContextTags": [
+                //     "color_black", "smoked_item"
+                //     ]
+                // }
+            }
+        }
+    ]
+}

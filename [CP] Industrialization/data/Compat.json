@@ -1,0 +1,535 @@
+{
+    "Changes": [
+
+        //Strange Machines object data
+        {
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "Entries": {
+                "{{ModID}}.PulvNickel": {
+                    "Name": "Pulverized Nickel",
+                    "DisplayName": "[LocalizedText Strings\\Objects:{{ModID}}.PulvNickel_Name]",
+                    "Description": "[LocalizedText Strings\\Objects:{{ModID}}.PulvNickel_Description]",
+                    "Type": "Basic",
+                    "Category": -15,
+                    "Price": 7,
+                    "Texture": "Mods\\{{ModID}}\\assets\\strangemachines",
+                    "SpriteIndex": 0
+                },
+                "{{ModID}}.PulvBStone": {
+                    "Name": "Pulverized Blackstone",
+                    "DisplayName": "[LocalizedText Strings\\Objects:{{ModID}}.PulvBStone_Name]",
+                    "Description": "[LocalizedText Strings\\Objects:{{ModID}}.PulvBStone_Description]",
+                    "Type": "Basic",
+                    "Category": -15,
+                    "Price": 15,
+                    "Texture": "Mods\\{{ModID}}\\assets\\strangemachines",
+                    "SpriteIndex": 1
+                }
+            },
+            "When": {
+                "HasMod": "MrtaiyouSolariaze.StrangeMachines"
+            }
+        },
+
+        // Strange Machines machines data
+        {
+            "Action": "EditData",
+            "Target": "Data/Machines",
+            "TargetField": [ "(BC){{ModID}}.Pulverizer", "OutputRules" ],
+            "Entries": {
+                "{{ModID}}_PulvNickel": {
+                    "Id": "Default_PulvNickel",
+                    "Triggers": [
+                        {    
+                        "Id": "ItemPlacedInMachine",
+                        "Trigger": "ItemPlacedInMachine",
+                        "RequiredItemID": "MrtaiyouSolariaze.StrangeMachines_NickelNugget",
+                        "RequiredCount": 5
+                        }
+                    ],
+                    "OutputItem": [
+                        {
+                        "ItemID": "(O){{ModID}}.PulvNickel", //Nickel
+                        "MinStack": 2,
+                        "MaxStack": 2
+                        }
+                    ],
+                    "MinutesUntilReady": 180
+                },
+                "{{ModID}}_PulvBStone": {
+                    "Id": "Default_PulvBStone",
+                    "Triggers": [
+                        {    
+                        "Id": "ItemPlacedInMachine",
+                        "Trigger": "ItemPlacedInMachine",
+                        "RequiredItemID": "MrtaiyouSolariaze.StrangeMachines_Blackstone",
+                        "RequiredCount": 5
+                        }
+                    ],
+                    "OutputItem": [
+                        {
+                        "ItemID": "(O){{ModID}}.PulvBStone", //Blackstone
+                        "MinStack": 2,
+                        "MaxStack": 2
+                        }
+                    ],
+                    "MinutesUntilReady": 720
+                }
+            },
+            "When": {
+                "HasMod": "MrtaiyouSolariaze.StrangeMachines"
+            }
+            
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Machines",
+            "TargetField": [ "(BC){{ModID}}.EFurnace", "OutputRules" ],
+            "Entries": {
+                "{{ModID}}_NBar": {
+                    "Id": "Default_NBar",
+                    "Triggers": [
+                        {
+                            "Trigger": "ItemPlacedInMachine",
+                            "RequiredItemId": "(O)MrtaiyouSolariaze.StrangeMachines_NickelNugget", //NOre
+                            "RequiredCount": 5
+                        }
+                    ],
+                    "OutputItem": [
+                        {
+                            "ItemId": "(O)MrtaiyouSolariaze.StrangeMachines_NickelBar",
+                            "CopyQuality": false,
+                            "MinStack": 1,
+                            "MaxStack": 1
+                        }
+                    ],
+                    "UseFirstValidOutput": false,
+                    "MinutesUntilReady": 180,
+                    "DaysUntilReady": -1
+                },
+                "{{ModID}}_BBrick": {
+                    "Id": "Default_BBrick",
+                    "Triggers": [
+                        {
+                            "Trigger": "ItemPlacedInMachine",
+                            "RequiredItemId": "(O)MrtaiyouSolariaze.StrangeMachines_Blackstone",
+                            "RequiredCount": 5
+                        }
+                    ],
+                    "OutputItem": [
+                        {
+                            "ItemId": "(O)MrtaiyouSolariaze.StrangeMachines_BlackBrick",
+                            "CopyQuality": false,
+                            "MinStack": 1,
+                            "MaxStack": 1
+                        }
+                    ],
+                    "UseFirstValidOutput": false,
+                    "MinutesUntilReady": 720,
+                    "DaysUntilReady": -1
+                },
+                "{{ModID}}_PulvNBar": {
+                    "Id": "Default_Pulv_NBar",
+                    "Triggers": [
+                        {
+                            "Trigger": "ItemPlacedInMachine",
+                            "RequiredItemId": "(O){{ModID}}.PulvNickel", //PulvNickel
+                            "RequiredCount": 1
+                        }
+                    ],
+                    "OutputItem": [
+                        {
+                            "ItemId": "(O)MrtaiyouSolariaze.StrangeMachines_NickelBar",
+                            "CopyQuality": false,
+                            "MinStack": 1,
+                            "MaxStack": 1
+                        }
+                    ],
+                    "UseFirstValidOutput": false,
+                    "MinutesUntilReady": 180,
+                    "DaysUntilReady": -1
+                },
+                "{{ModID}}_PulvBBrick": {
+                    "Id": "Default_Pulv_BBrick",
+                    "Triggers": [
+                        {
+                            "Trigger": "ItemPlacedInMachine",
+                            "RequiredItemId": "(O){{ModID}}.PulvBStone",
+                            "RequiredCount": 1
+                        }
+                    ],
+                    "OutputItem": [
+                        {
+                            "ItemId": "(O)MrtaiyouSolariaze.StrangeMachines_BlackBrick",
+                            "CopyQuality": false,
+                            "MinStack": 1,
+                            "MaxStack": 1
+                        }
+                    ],
+                    "UseFirstValidOutput": false,
+                    "MinutesUntilReady": 720,
+                    "DaysUntilReady": -1
+                }
+            },
+            "When": {
+                "HasMod": "MrtaiyouSolariaze.StrangeMachines"
+            }
+        },
+        
+        {
+            "Action": "EditData",
+            "Target": "Data/Machines",
+            "TargetField": [ "(BC){{ModID}}.AlternatorEFurnace", "OutputRules" ],
+            "Entries": {
+                "{{ModID}}_PulvNBar": {
+                    "Id": "Default_Pulv_NBar",
+                    "Triggers": [
+                        {
+                            "Trigger": "ItemPlacedInMachine",
+                            "RequiredItemId": "(O){{ModID}}.PulvNickel", //PulvNickel
+                            "RequiredCount": 1
+                        }
+                    ],
+                    "OutputItem": [
+                        {
+                            "ItemId": "(O)MrtaiyouSolariaze.StrangeMachines_NickelBar",
+                            "CopyQuality": false,
+                            "MinStack": 1,
+                            "MaxStack": 1
+                        }
+                    ],
+                    "UseFirstValidOutput": false,
+                    "MinutesUntilReady": 180,
+                    "DaysUntilReady": -1
+                },
+                "{{ModID}}_PulvBBrick": {
+                    "Id": "Default_Pulv_BBrick",
+                    "Triggers": [
+                        {
+                            "Trigger": "ItemPlacedInMachine",
+                            "RequiredItemId": "(O){{ModID}}.PulvBStone",
+                            "RequiredCount": 1
+                        }
+                    ],
+                    "OutputItem": [
+                        {
+                            "ItemId": "(O)MrtaiyouSolariaze.StrangeMachines_BlackBrick",
+                            "CopyQuality": false,
+                            "MinStack": 1,
+                            "MaxStack": 1
+                        }
+                    ],
+                    "UseFirstValidOutput": false,
+                    "MinutesUntilReady": 720,
+                    "DaysUntilReady": -1
+                }
+            },
+            "When": {
+                "HasMod": "MrtaiyouSolariaze.StrangeMachines"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Machines",
+            "TargetField": [ "(BC){{ModID}}.ChromiumFurnace", "OutputRules" ],
+            "Entries": {
+                "{{ModID}}_NBar": {
+                    "Id": "Default_NBar",
+                    "Triggers": [
+                        {
+                            "Trigger": "ItemPlacedInMachine",
+                            "RequiredItemId": "(O)MrtaiyouSolariaze.StrangeMachines_NickelNugget", //NOre
+                            "RequiredCount": 5,
+                            "Condition": "{{G256.IR.Code/UseOres}}"
+                        }
+                    ],
+                    "OutputItem": [
+                        {
+                            "ItemId": "(O)MrtaiyouSolariaze.StrangeMachines_NickelBar",
+                            "CopyQuality": false,
+                            "MinStack": 2,
+                            "MaxStack": 2
+                        }
+                    ],
+                    "UseFirstValidOutput": false,
+                    "MinutesUntilReady": 90,
+                    "DaysUntilReady": -1
+                },
+                "{{ModID}}_BBrick": {
+                    "Id": "Default_BBrick",
+                    "Triggers": [
+                        {
+                            "Trigger": "ItemPlacedInMachine",
+                            "RequiredItemId": "(O)MrtaiyouSolariaze.StrangeMachines_Blackstone",
+                            "RequiredCount": 5,
+                            "Condition": "{{G256.IR.Code/UseOres}}"
+                        }
+                    ],
+                    "OutputItem": [
+                        {
+                            "ItemId": "(O)MrtaiyouSolariaze.StrangeMachines_BlackBrick",
+                            "CopyQuality": false,
+                            "MinStack": 2,
+                            "MaxStack": 2
+                        }
+                    ],
+                    "UseFirstValidOutput": false,
+                    "MinutesUntilReady": 360,
+                    "DaysUntilReady": -1
+                },
+                "{{ModID}}_PulvNBar": {
+                    "Id": "Default_Pulv_NBar",
+                    "Triggers": [
+                        {
+                            "Trigger": "ItemPlacedInMachine",
+                            "RequiredItemId": "(O){{ModID}}.PulvNickel", //PulvNickel
+                            "RequiredCount": 1
+                        }
+                    ],
+                    "OutputItem": [
+                        {
+                            "ItemId": "(O)MrtaiyouSolariaze.StrangeMachines_NickelBar",
+                            "CopyQuality": false,
+                            "MinStack": 2,
+                            "MaxStack": 2
+                        }
+                    ],
+                    "UseFirstValidOutput": false,
+                    "MinutesUntilReady": 90,
+                    "DaysUntilReady": -1
+                },
+                "{{ModID}}_PulvBBrick": {
+                    "Id": "Default_Pulv_BBrick",
+                    "Triggers": [
+                        {
+                            "Trigger": "ItemPlacedInMachine",
+                            "RequiredItemId": "(O){{ModID}}.PulvBStone",
+                            "RequiredCount": 1
+                        }
+                    ],
+                    "OutputItem": [
+                        {
+                            "ItemId": "(O)MrtaiyouSolariaze.StrangeMachines_BlackBrick",
+                            "CopyQuality": false,
+                            "MinStack": 2,
+                            "MaxStack": 2
+                        }
+                    ],
+                    "UseFirstValidOutput": false,
+                    "MinutesUntilReady": 360,
+                    "DaysUntilReady": -1
+                }
+            },
+            "When": {
+                "HasMod": "MrtaiyouSolariaze.StrangeMachines"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Machines",
+            "TargetField": [ "(BC){{ModID}}.ChroHFurnace", "OutputRules" ],
+            "Entries": {
+                "{{ModID}}_NBar": {
+                    "Id": "Default_NBar",
+                    "Triggers": [
+                        {
+                            "Trigger": "ItemPlacedInMachine",
+                            "RequiredItemId": "(O)MrtaiyouSolariaze.StrangeMachines_NickelNugget", //NOre
+                            "RequiredCount": 25,
+                            "Condition": "{{G256.IR.Code/UseOres}}"
+                        }
+                    ],
+                    "OutputItem": [
+                        {
+                            "ItemId": "(O)MrtaiyouSolariaze.StrangeMachines_NickelBar",
+                            "CopyQuality": false,
+                            "MinStack": 10,
+                            "MaxStack": 12
+                        }
+                    ],
+                    "UseFirstValidOutput": false,
+                    "MinutesUntilReady": 90,
+                    "DaysUntilReady": -1
+                },
+                "{{ModID}}_BBrick": {
+                    "Id": "Default_BBrick",
+                    "Triggers": [
+                        {
+                            "Trigger": "ItemPlacedInMachine",
+                            "RequiredItemId": "(O)MrtaiyouSolariaze.StrangeMachines_Blackstone",
+                            "RequiredCount": 25,
+                            "Condition": "{{G256.IR.Code/UseOres}}"
+                        }
+                    ],
+                    "OutputItem": [
+                        {
+                            "ItemId": "(O)MrtaiyouSolariaze.StrangeMachines_BlackBrick",
+                            "CopyQuality": false,
+                            "MinStack": 10,
+                            "MaxStack": 12
+                        }
+                    ],
+                    "UseFirstValidOutput": false,
+                    "MinutesUntilReady": 360,
+                    "DaysUntilReady": -1
+                },
+                "{{ModID}}_PulvNBar": {
+                    "Id": "Default_Pulv_NBar",
+                    "Triggers": [
+                        {
+                            "Trigger": "ItemPlacedInMachine",
+                            "RequiredItemId": "(O){{ModID}}.PulvNickel", //PulvNickel
+                            "RequiredCount": 5
+                        }
+                    ],
+                    "OutputItem": [
+                        {
+                            "ItemId": "(O)MrtaiyouSolariaze.StrangeMachines_NickelBar",
+                            "CopyQuality": false,
+                            "MinStack": 10,
+                            "MaxStack": 12
+                        }
+                    ],
+                    "UseFirstValidOutput": false,
+                    "MinutesUntilReady": 90,
+                    "DaysUntilReady": -1
+                },
+                "{{ModID}}_PulvBBrick": {
+                    "Id": "Default_Pulv_BBrick",
+                    "Triggers": [
+                        {
+                            "Trigger": "ItemPlacedInMachine",
+                            "RequiredItemId": "(O){{ModID}}.PulvBStone",
+                            "RequiredCount": 5
+                        }
+                    ],
+                    "OutputItem": [
+                        {
+                            "ItemId": "(O)MrtaiyouSolariaze.StrangeMachines_BlackBrick",
+                            "CopyQuality": false,
+                            "MinStack": 10,
+                            "MaxStack": 12
+                        }
+                    ],
+                    "UseFirstValidOutput": false,
+                    "MinutesUntilReady": 360,
+                    "DaysUntilReady": -1
+                }
+            },
+            "When": {
+                "HasMod": "MrtaiyouSolariaze.StrangeMachines"
+            }
+        },
+        {
+			"Action": "EditData",
+			"Target": "Data/Machines",
+			"TargetField": [ "(BC){{ModID}}.IndustrialDistillery", "OutputRules" ],
+			"Entries": {
+				"Cornucopia_DarkAle": {
+					"Id": "Cornucopia_DarkAle",
+					"Triggers": 
+						[
+							{
+								"RequiredItemId": "(O)Cornucopia_Durum",
+                                "RequiredCount": 5
+							}
+						],
+					"OutputItem":
+						[
+							{
+								"ItemId": "(O)Cornucopia_DarkAle",
+                                "MinStack": 5,
+                                "CopyQuality": true
+							}
+						],
+					"MinutesUntilReady": 1130
+				},
+				"Cornucopia_Porter": {
+					"Id": "Cornucopia_Porter",
+					"Triggers": 
+						[
+							{
+								"RequiredItemId": "(O)Cornucopia_Buckwheat",
+                                "RequiredCount": 5
+							}
+						],
+					"OutputItem":
+						[
+							{
+								"ItemId": "(O)Cornucopia_Porter",
+                                "MinStack": 5,
+                                "CopyQuality": true
+							}
+						],
+					"MinutesUntilReady": 880
+				},
+				"Cornucopia_SparklingWine": {
+					"Id": "Cornucopia_SparklingWine",
+					"Triggers": 
+						[
+							{
+								"RequiredItemId": "(O)Cornucopia_WhiteGrape",
+                                "RequiredCount": 5
+							}
+						],
+					"OutputItem":
+						[
+							{
+								"ItemId": "(O)Cornucopia_SparklingWine",
+                                "MinStack": 5,
+                                "CopyQuality": true
+							}
+						],
+					"MinutesUntilReady": 3000
+				},
+				"Cornucopia_Stout": {
+					"Id": "Cornucopia_Stout",
+					"Triggers": 
+						[
+							{
+								"RequiredItemId": "(O)Cornucopia_Barley",
+                                "RequiredCount": 5
+							}
+						],
+					"OutputItem":
+						[
+							{
+								"ItemId": "(O)Cornucopia_Stout",
+                                "MinStack": 5,
+                                "CopyQuality": true
+							}
+						],
+					"MinutesUntilReady": 880
+				}
+			},
+			"MoveEntries": 
+				[
+					{ "Id": "Cornucopia_DarkAle", "BeforeId": "Default_Juice" },
+					{ "Id": "Cornucopia_Porter", "BeforeId": "Default_Juice" },
+					{ "Id": "Cornucopia_SparklingWine", "BeforeId": "Default_Wine" },
+					{ "Id": "Cornucopia_Stout", "BeforeId": "Default_Juice" }
+			],
+            "When":{
+                "HasMod": "Cornucopia.MoreCrops"
+            }
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Machines",
+			"TargetField": [ "(BC){{ModID}}.IndustrialDistillery", "OutputRules" ],
+			"When": 
+				{
+					"HasMod": "Cornucopia.ArtisanMachines, Cornucopia.MoreCrops",
+					"HasReadLetter |contains=Cornucopia.ArtisanMachines_VegetableWineEnabled": true
+					
+				},
+			"MoveEntries": 
+				[
+					{ "Id": "Cornucopia_DarkAle", "BeforeId": "Cornucopia_Wine" },
+					{ "Id": "Cornucopia_Porter", "BeforeId": "Cornucopia_Wine" },
+					{ "Id": "Cornucopia_Stout", "BeforeId": "Cornucopia_Wine" }
+			]
+		}
+    ]
+}

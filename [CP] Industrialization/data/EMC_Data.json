@@ -1,0 +1,16 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "selph.ExtraMachineConfig/ExtraOutputs",
+            "Entries": {
+                "IR.ClayExtra": {
+                    "ID": "IR.ClayExtra",
+                    "ItemID": "(O)330",
+                    "MinStack": 1,
+                    "MaxStack": 5
+                }
+            }
+        }
+    ]
+}

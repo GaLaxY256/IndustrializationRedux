@@ -1,0 +1,149 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "Entries": {
+                "{{ModId}}_HasSeenClintEvent": {
+                    "Id": "{{ModId}}_HasSeenClintEvent",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_HAS_SEEN_EVENT Current 992553, PLAYER_STAT Current ironFound 50",
+                    "Actions": [
+                        "AddMail Current {{ModID}}.EFurnaceMail"
+                    ]
+                },
+                "{{ModId}}_HasFinishedQuest": {
+                    "Id": "{{ModId}}_HasFinishedQuest",
+                    "Trigger": "DayEnding",
+                    "Condition": "PLAYER_HAS_MAIL Current {{ModID}}.ChroFurnaceComplete Received, PLAYER_HAS_MAIL Current {{ModID}}.EFurnaceMail Received",
+                    "Actions": [
+                        "AddMail Current {{ModID}}.ChroFurnaceMail"
+                    ]
+                },
+                "{{ModId}}_HasShipped300": {
+                    "Id": "{{ModId}}_HasShipped300",
+                    "Trigger": "DayEnding",
+                    "Condition": "{{G256.IR.Code/HasShippedThreeHundred}}",
+                    "Actions": [
+                        "AddMail Current {{ModID}}.GardenClocheMail"
+                    ]
+                },
+                "{{ModId}}_HasShipped777": {
+                    "Id": "{{ModId}}_HasShipped777",
+                    "Trigger": "DayEnding",
+                    "Condition": "{{G256.IR.Code/HasShippedLuckySeven}}",
+                    "Actions": [
+                        "AddMail Current {{ModID}}.SuperGardenMail"
+                    ]
+                },
+                "{{ModId}}_HasReachedLevelDistillery": {
+                    "Id": "{{ModId}}_HasReachedLevelDistillery",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_FARMING_LEVEL Current 9",
+                    "Actions": [
+                        "AddMail Current {{ModID}}.DistilleryMail"
+                    ]
+                },
+                "{{ModId}}_HasReachedLevelPress": {
+                    "Id": "{{ModId}}_HasReachedLevelPress",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_FARMING_LEVEL Current 4",
+                    "Actions": [
+                        "AddMail Current {{ModID}}.PressMail"
+                    ]
+                },
+                "{{ModId}}_HasReachedLevelTreeCloche": {
+                    "Id": "{{ModId}}_HasReachedLevelTreeCloche",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_FORAGING_LEVEL Current 4",
+                    "Actions": [
+                        "AddMail Current {{ModID}}.TreeClocheMail"
+                    ]
+                },
+                "{{ModId}}_HasReachedDayHayBin": {
+                    "Id": "{{ModId}}_HasReachedDayHayBin",
+                    "Trigger": "DayStarted",
+                    "Condition": "DAY_OF_MONTH 14, SEASON fall",
+                    "Actions": [
+                        "AddMail Current {{ModID}}.HayBinMail"
+                    ]
+                },
+                "{{ModId}}_HasReachedDayHayRehydrator": {
+                    "Id": "{{ModId}}_HasReachedDayHayRehydrator",
+                    "Trigger": "DayStarted",
+                    "Condition": "DAY_OF_MONTH 22, SEASON winter",
+                    "Actions": [
+                        "AddMail Current {{ModID}}.HayRehydratorMail"
+                    ]
+                },
+                "{{ModId}}_HasDonatedGems": {
+                    "Id": "{{ModId}}_HasDonatedGems",
+                    "Trigger": "DayStarted",
+                    "Condition": "MUSEUM_DONATIONS 15 Minerals",
+                    "Actions": [
+                        "AddMail Current {{ModID}}.GemPolisherMail"
+                    ]
+                },
+                "{{ModId}}_HasDonatedMinerals": {
+                    "Id": "{{ModId}}_HasDonatedMinerals",
+                    "Trigger": "DayStarted",
+                    "Condition": "MUSEUM_DONATIONS 10 Minerals",
+                    "Actions": [
+                        "AddMail Current {{ModID}}.MineralWasherMail"
+                    ]
+                },
+                "{{ModId}}_HasReachedLevelSeedMakers": {
+                    "Id": "{{ModId}}_HasReachedLevelSeedMakers",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_FARMING_LEVEL Current 9",
+                    "Actions": [
+                        "AddMail Current {{ModID}}.SeedMakersMail"
+                    ]
+                },
+                "{{ModID}}_HasCraftingRecipeChroHFurnace": {
+                    "Id": "{{ModID}}_HasCraftingRecipeChroHFurnace",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_HAS_CRAFTING_RECIPE Current Heavy Furnace, PLAYER_HAS_CRAFTING_RECIPE Current Chromium Furnace",
+                    "Actions": [
+                        "AddMail Current {{ModID}}.ChroHFurnaceMail"
+                    ]
+                },
+                "{{ModID}}_HasReachedLevelAQUA": {
+                    "Id": "{{ModId}}_HasReachedLevelAQUA",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_FISHING_LEVEL Current 7",
+                    "Actions": [
+                        "AddMail Current {{ModID}}.AQUAMail"
+                    ]
+                }
+            },
+            "When": {
+                "G256.IR.Code/ProgressMode": true,
+                "G256.IR.Code/EnabledAltEFurnace": true,
+                "G256.IR.Code/EnabledAutoMiner": true,
+                "G256.IR.Code/EnabledCeramicKiln": true,
+                "G256.IR.Code/EnabledChroFurnace": true,
+                "G256.IR.Code/EnabledCombustionGen": true,
+                "G256.IR.Code/EnabledCombustionMiner": true,
+                "G256.IR.Code/EnabledEFurnace": true,
+                "G256.IR.Code/EnabledGardenCloche": true,
+                "G256.IR.Code/EnabledGemPolisher": true,
+                "G256.IR.Code/EnabledHayBin": true,
+                "G256.IR.Code/EnabledHayRehydrator": true,
+                "G256.IR.Code/EnabledIndustrialDistillery": true,
+                "G256.IR.Code/EnabledJColaGenerator": true,
+                "G256.IR.Code/EnabledMineralWasher": true,
+                "G256.IR.Code/EnabledPreservativePress": true,
+                "G256.IR.Code/EnabledPulverizer": true,
+                "G256.IR.Code/EnabledRockCrusher": true,
+                "G256.IR.Code/EnabledSGardenCloche": true,
+                "G256.IR.Code/EnabledTreeCloche": true,
+                "G256.IR.Code/EnabledFeSeedMaker": true,
+                "G256.IR.Code/EnabledAuSeedMaker": true,
+                "G256.IR.Code/EnabledIrSeedMaker": true,
+                "G256.IR.Code/EnabledGasSmoker": true,
+                "G256.IR.Code/EnabledFishingWell": true
+            }
+        }
+    ]
+}

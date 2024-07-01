@@ -1,0 +1,377 @@
+{
+    "Changes": [
+        {
+            "LogName": "Progress Mode Disabled",
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+            "Entries": {
+                "Alternator E. Furnace": "{{ModID}}.Brick 10 334 4 335 2 787 2/Home/{{ModID}}.AlternatorEFurnace/true/default"
+            },
+            "When": {
+                "G256.IR.Code/ProgressMode": false,
+                "G256.IR.Code/EnabledAltEFurnace": true
+            }
+        },
+        {
+            "LogName": "Progress Mode Disabled",
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+            "Entries": {
+                "Auto Miner": "{{ModID}}.Brick 64 {{ModID}}.ChroBar 20 335 24 709 12 787 8/Field/{{ModID}}.AutoMiner/true/default"
+            },
+            "When": {
+                "G256.IR.Code/ProgressMode": false,
+                "G256.IR.Code/EnabledAutoMiner": true
+            }
+        },
+        {
+            "LogName": "Progress Mode Disabled",
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+            "Entries": {
+                "Ceramic Kiln": "334 2 390 50 330 10/Home/{{ModID}}.CeramicKiln/true/default"
+            },
+            "When": {
+                "G256.IR.Code/ProgressMode": false,
+                "G256.IR.Code/EnabledCeramicKiln": true
+            }
+        },
+        {
+            "LogName": "Progress Mode Disabled",
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+            "Entries": {
+                "Chromium Furnace": "{{ModID}}.Brick 64 {{ModID}}.ChroBar 18 336 12 335 15 338 24 787 5/Home/{{ModID}}.ChromiumFurnace/true/default"
+            },
+            "When": {
+                "G256.IR.Code/ProgressMode": false,
+                "G256.IR.Code/EnabledChroFurnace": true
+            }
+        },
+        {
+            "LogName": "Progress Mode Disabled",
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+            "Entries": {
+                "Combustion Generator": "{{ModID}}.Brick 4 335 3 338 3 787 8/Home/{{ModID}}.CombustionGenerator/true/default"
+            },
+            "When": {
+                "G256.IR.Code/ProgressMode": false,
+                "G256.IR.Code/EnabledCombustionGen": true
+            }
+        },
+        {
+            "LogName": "Progress Mode Disabled",
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+            "Entries": {
+                "Combutstion Miner": "{{ModID}}.Brick 10 726 1 334 1 338 2 787 1/Field/{{ModID}}.CombustionMiner/true/default"
+            },
+            "When": {
+                "G256.IR.Code/ProgressMode": false,
+                "G256.IR.Code/EnabledCombustionMiner": true
+            }
+        },
+        {
+            "LogName": "Progress Mode Disabled",
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+            "Entries": {
+                "Electric Furnace": "{{ModID}}.Brick 5 334 3 390 30 787 1/Home/{{ModID}}.EFurnace/true/default"
+            },
+            "When": {
+                "G256.IR.Code/ProgressMode": false,
+                "G256.IR.Code/EnabledEFurnace": true
+            }
+        },
+        {
+            "LogName": "Progress Mode Disabled",
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+            "Entries": {
+                "Garden Cloche": "{{ModID}}.ChroBar 15 {{ModID}}.Brick 50 369 150 336 15 787 10/Home/{{ModID}}.GardenCloche/true/default"
+            },
+            "When": {
+                "G256.IR.Code/ProgressMode": false,
+                "G256.IR.Code/EnabledGardenCloche": true
+            }
+        },
+        {
+            "LogName": "Progress Mode Disabled",
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+            "Entries": {
+                "Gem Polisher": "{{ModID}}.Brick 24 336 10 338 15 787 4/Home/{{ModID}}.GemPolisher/true/default"
+            },
+            "When": {
+                "G256.IR.Code/ProgressMode": false,
+                "G256.IR.Code/EnabledGemPolisher": true
+            }
+        },
+        {
+            "LogName": "Progress Mode Disabled",
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+            "Entries": {
+                "Hay Bin": "335 8 86 2 709 10 787 1/Home/{{ModID}}.HayBin/true/default"
+            },
+            "When": {
+                "G256.IR.Code/ProgressMode": false,
+                "G256.IR.Code/EnabledHayBin": true
+            }
+        },
+        {
+            "LogName": "Progress Mode Disabled",
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+            "Entries": {
+                "Hay Rehydrator": "335 8 86 2 709 10 787 1/Home/{{ModID}}.HayRehydrator/true/default"
+            },
+            "When": {
+                "G256.IR.Code/ProgressMode": false,
+                "G256.IR.Code/EnabledHayRehydrator": true
+            }
+        },
+        {
+            "LogName": "Progress Mode Disabled",
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+            "Entries": {
+                "Industrial Distillery": "{{ModID}}.Brick 8 {{ModID}}.ChroBar 1 709 2 336 1 725 1 787 1/Home/{{ModID}}.IndustrialDistillery/true/default"
+            },
+            "When": {
+                "G256.IR.Code/ProgressMode": false,
+                "G256.IR.Code/EnabledIndustrialDistillery": true
+            }
+        },
+        {
+            "LogName": "Progress Mode Disabled",
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+            "Entries": {
+                "JojaCola Generator": "167 50 335 10 767 1/Home/{{ModID}}.JColaGenerator/true"
+            },
+            "When": {
+                "G256.IR.Code/ProgressMode": false,
+                "G256.IR.Code/EnabledJColaGenerator": true
+            }
+        },
+        {
+            "LogName": "Progress Mode Disabled",
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+            "Entries": {
+                "Mineral Washer": "{{ModID}}.Brick 10 334 12 335 8 787 2/Home/{{ModID}}.MineralWasher/true/default"
+            },
+            "When": {
+                "G256.IR.Code/ProgressMode": false,
+                "G256.IR.Code/EnabledMineralWasher": true
+            }
+        },
+        {
+            "LogName": "Progress Mode Disabled",
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+            "Entries": {
+                "Preservative Press": "{{ModID}}.Brick 8 {{ModID}}.ChroBar 1 709 2 335 1 382 8 787 1/Home/{{ModID}}.PreservativePress/true/default"
+            },
+            "When": {
+                "G256.IR.Code/ProgressMode": false,
+                "G256.IR.Code/EnabledPreservativePress": true
+            }
+        },
+        {
+            "LogName": "Progress Mode Disabled",
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+            "Entries": {
+                "Pulverizer": "{{ModID}}.Brick 15 335 8 336 5 338 5 787 2/Home/{{ModID}}.Pulverizer/true/default"
+            },
+            "When": {
+                "G256.IR.Code/ProgressMode": false,
+                "G256.IR.Code/EnabledPulverizer": true
+            }
+        },
+        {
+            "LogName": "Progress Mode Disabled",
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+            "Entries": {
+                "Rock Crusher": "338 12 336 8 {{ModID}}.Brick 15 787 2 386 5/Home/{{ModID}}.RockCrusher/true/default"
+            },
+            "When": {
+                "G256.IR.Code/ProgressMode": false,
+                "G256.IR.Code/EnabledRockCrusher": true
+            }
+        },{
+            "LogName": "Progress Mode Disabled",
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+            "Entries": {
+                "Super Garden Cloche": "{{ModID}}.ChroBar 400 {{ModID}}.Brick 999 369 999 336 400 787 200/Home/{{ModID}}.SuperGardenCloche/true/default"
+            },
+            "When": {
+                "G256.IR.Code/ProgressMode": false,
+                "G256.IR.Code/EnabledSGardenCloche": true
+            }
+        },
+        {
+            "LogName": "Progress Mode Disabled",
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+            "Entries": {
+                "Tree Cloche": "310 3 309 3 311 3 {{ModID}}.Brick 10 335 8 787 3/Home/{{ModID}}.TreeCloche/true/default"
+            },
+            "When": {
+                "G256.IR.Code/ProgressMode": false,
+                "G256.IR.Code/EnabledTreeCloche": true
+            }
+        },
+        {
+            "LogName": "Progress Mode Disabled",
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+            "Entries": {
+                "Chromium Compound": "{{ModID}}.PulvPris 10 {{ModID}}.PulvIridium 10 {{ModID}}.PulvQuartz 10/Home/{{ModID}}.ChroCompound 30/false/default"
+            },
+            "When": {
+                "G256.IR.Code/ProgressMode": false,
+                "G256.IR.Code/EnabledPulverizer": true
+            }
+        },
+        {
+            "LogName": "Progress Mode Disabled",
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+            "Entries": {
+                "Iron Seed Maker": "388 25 335 2 336 2 382 10/Field/{{ModID}}.IronSeedMaker/true/default"
+            },
+            "When": {
+                "G256.IR.Code/ProgressMode": false,
+                "G256.IR.Code/EnabledFeSeedMaker": true
+            }
+        },
+        {
+            "LogName": "Progress Mode Disabled",
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+            "Entries": {
+                "Gold Seed Maker": "388 25 336 2 337 2 382 10/Field/{{ModID}}.GoldSeedMaker/true/default"
+            },
+            "When": {
+                "G256.IR.Code/ProgressMode": false,
+                "G256.IR.Code/EnabledAuSeedMaker": true
+            }
+        },
+        {
+            "LogName": "Progress Mode Disabled",
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+            "Entries": {
+                "Iridium Seed Maker": "388 25 337 2 74 2 382 10/Field/{{ModID}}.IridiumSeedMaker/true/default"
+            },
+            "When": {
+                "G256.IR.Code/ProgressMode": false,
+                "G256.IR.Code/EnabledIrSeedMaker": true
+            }
+        },
+        {
+            "LogName": "Progress Mode Disabled",
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+            "Entries": {
+                "Chromium Heavy Furnace": "{{ModID}}.ChromiumFurnace 2 {{ModID}}.ChroBar 5 335 30/Home/{{ModID}}.ChroHFurnace/true/default"
+            },
+            "When": {
+                "G256.IR.Code/ProgressMode": false,
+                "G256.IR.Code/EnabledChroFurnace": true
+            }
+        },
+        {
+            "LogName": "Progress Mode Disabled",
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+            "Entries": {
+                "AQUA Gas Smoker": "335 10 SeaJelly 3 RiverJelly 3 CaveJelly 3/Home/{{ModID}}.GasSmoker/true/default"
+            },
+            "When": {
+                "G256.IR.Code/ProgressMode": false,
+                "G256.IR.Code/EnabledGasSmoker": true
+            }
+        },
+        {
+            "LogName": "Progress Mode Disabled",
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+            "Entries": {
+                "AQUA Fish Catcher": "337 5 335 5 771 15 709 50/Home/{{ModID}}.FishingWell/true/default"
+            },
+            "When": {
+                "G256.IR.Code/ProgressMode": false,
+                "G256.IR.Code/EnabledFishingWell": true
+            }
+        },
+        {
+            "LogName": "Progress Mode Enabled",
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+            "Entries": {
+                "Alternator E. Furnace": "{{ModID}}.Brick 10 334 4 335 2 787 2/Home/{{ModID}}.AlternatorEFurnace/true",
+                "Auto Miner": "{{ModID}}.Brick 64 {{ModID}}.ChroBar 20 335 24 709 12 787 8/Field/{{ModID}}.AutoMiner/true/Mining 9",
+                "Ceramic Kiln": "334 2 390 50 330 10/Home/{{ModID}}.CeramicKiln/true",
+                "Chromium Furnace": "{{ModID}}.Brick 64 {{ModID}}.ChroBar 18 336 12 335 15 338 24 787 5/Home/{{ModID}}.ChromiumFurnace/true",
+                "Combustion Generator": "{{ModID}}.Brick 4 335 3 338 3 787 8/Home/{{ModID}}.CombustionGenerator/true",
+                "Combutstion Miner": "{{ModID}}.Brick 10 726 1 334 1 338 2 787 1/Field/{{ModID}}.CombustionMiner/true/Mining 3",
+                "Electric Furnace": "{{ModID}}.Brick 5 334 3 390 30 787 1/Home/{{ModID}}.EFurnace/true/",
+                "Garden Cloche": "{{ModID}}.ChroBar 15 {{ModID}}.Brick 50 369 150 336 15 787 10/Home/{{ModID}}.GardenCloche/true",
+                "Gem Polisher": "{{ModID}}.Brick 24 336 10 338 15 787 4/Home/{{ModID}}.GemPolisher/true",
+                "Hay Bin": "335 8 86 2 709 10 787 1/Home/{{ModID}}.HayBin/true",
+                "Hay Rehydrator": "335 8 86 2 709 10 787 1/Home/{{ModID}}.HayRehydrator/true",
+                "Industrial Distillery": "{{ModID}}.Brick 8 {{ModID}}.ChroBar 1 709 2 336 1 725 1 787 1/Home/{{ModID}}.IndustrialDistillery/true",
+                "JojaCola Generator": "167 50 335 10 767 1/Home/{{ModID}}.JColaGenerator/true",
+                "Mineral Washer": "{{ModID}}.Brick 10 334 12 335 8 787 2/Home/{{ModID}}.MineralWasher/true",
+                "Preservative Press": "{{ModID}}.Brick 8 {{ModID}}.ChroBar 1 709 2 335 1 382 8 787 1/Home/{{ModID}}.PreservativePress/true",
+                "Pulverizer": "{{ModID}}.Brick 15 335 8 336 5 338 5 787 2/Home/{{ModID}}.Pulverizer/true",
+                "Rock Crusher": "338 12 336 8 {{ModID}}.Brick 15 787 2 386 5/Home/{{ModID}}.RockCrusher/true/Mining 4",
+                "Super Garden Cloche": "{{ModID}}.ChroBar 400 {{ModID}}.Brick 999 369 999 336 400 787 200/Home/{{ModID}}.SuperGardenCloche/true",
+                "Tree Cloche": "310 3 309 3 311 3 {{ModID}}.Brick 10 335 8 787 3/Home/{{ModID}}.TreeCloche/true",
+                "Chromium Compound": "{{ModID}}.PulvPris 10 {{ModID}}.PulvIridium 10 {{ModID}}.PulvQuartz 10/Home/{{ModID}}.ChroCompound 30/false",
+                "Iron Seed Maker": "388 25 335 2 336 2 382 10/Field/{{ModID}}.IronSeedMaker/true",
+                "Gold Seed Maker": "388 25 336 2 337 2 382 10/Field/{{ModID}}.GoldSeedMaker/true",
+                "Iridium Seed Maker": "388 25 337 2 74 2 382 10/Field/{{ModID}}.IridiumSeedMaker/true",
+
+                //New in 1.1.0
+                "Chromium Heavy Furnace": "{{ModID}}.ChromiumFurnace 2 {{ModID}}.ChroBar 5 335 30/Home/{{ModID}}.ChroHFurnace/true",
+                "AQUA Gas Smoker": "335 10 SeaJelly 3 RiverJelly 3 CaveJelly 3/Home/{{ModID}}.GasSmoker/true",
+                "AQUA Fish Catcher": "337 5 335 5 771 15 709 50/Home/{{ModID}}.FishingWell/true"
+            },
+            "When": {
+                "G256.IR.Code/ProgressMode": true,
+                "G256.IR.Code/EnabledAltEFurnace": true,
+                "G256.IR.Code/EnabledAutoMiner": true,
+                "G256.IR.Code/EnabledCeramicKiln": true,
+                "G256.IR.Code/EnabledChroFurnace": true,
+                "G256.IR.Code/EnabledCombustionGen": true,
+                "G256.IR.Code/EnabledCombustionMiner": true,
+                "G256.IR.Code/EnabledEFurnace": true,
+                "G256.IR.Code/EnabledGardenCloche": true,
+                "G256.IR.Code/EnabledGemPolisher": true,
+                "G256.IR.Code/EnabledHayBin": true,
+                "G256.IR.Code/EnabledHayRehydrator": true,
+                "G256.IR.Code/EnabledIndustrialDistillery": true,
+                "G256.IR.Code/EnabledJColaGenerator": true,
+                "G256.IR.Code/EnabledMineralWasher": true,
+                "G256.IR.Code/EnabledPreservativePress": true,
+                "G256.IR.Code/EnabledPulverizer": true,
+                "G256.IR.Code/EnabledRockCrusher": true,
+                "G256.IR.Code/EnabledSGardenCloche": true,
+                "G256.IR.Code/EnabledTreeCloche": true,
+                "G256.IR.Code/EnabledFeSeedMaker": true,
+                "G256.IR.Code/EnabledAuSeedMaker": true,
+                "G256.IR.Code/EnabledIrSeedMaker": true,
+                "G256.IR.Code/EnabledGasSmoker": true,
+                "G256.IR.Code/EnabledFishingWell": true
+            }
+        }
+    ]
+}

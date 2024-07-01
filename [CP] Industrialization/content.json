@@ -1,0 +1,115 @@
+{
+    "Format": "2.0.0",
+    "Changes": [
+        {   
+            //Big Craftables Data and Strings
+            "Action": "Include",
+            "FromFile": "data/BigCraftables.json, data/strings/BigCraftables.json"
+        },
+        {   
+            //Objects Data and Strings
+            "Action": "Include",
+            "FromFile": "data/Objects.json, data/strings/Objects.json"
+        },
+        {   
+            //Machines data and its relevant EMC data
+            "Action": "Include",
+            "FromFile": "data/Machines.json, data/EMC_Data.json"
+        },
+        // {   
+        //     //Audio data
+        //     "Action": "Include",
+        //     "FromFile": "data/audioChanges.json"
+        // },
+        {   
+            //Big craftables data
+            "Action": "Include",
+            "FromFile": "data/CraftingRecipes.json"
+        },
+        {   
+            //Big craftables data
+            "Action": "Include",
+            "FromFile": "data/CraftingRecipes.json"
+        },
+        {   
+            //Trigger Actions data
+            "Action": "Include",
+            "FromFile": "data/TriggerActions.json"
+        },
+        {   
+            //Museum rewards data
+            "Action": "Include",
+            "FromFile": "data/MuseumRewards.json"
+        },
+        {   
+            //Mail data
+            "Action": "Include",
+            "FromFile": "data/Mails.json"
+        },
+        {   
+            //Quest data
+            "Action": "Include",
+            "FromFile": "data/Quests.json"
+        },
+        {   
+            //Shop data
+            "Action": "Include",
+            "FromFile": "data/shops.json"
+        },
+        {
+            //Compatibility data
+            "Action": "Include",
+            "FromFile": "data/compat.json, data/strings/compat.json"
+        },
+        {
+            //Assets
+            "Action": "Load",
+            "Target": "Mods/{{ModID}}/assets/BigCraftables, Mods/{{ModID}}/assets/Objects, Mods/{{ModID}}/assets/StrangeMachines, Mods/{{ModID}}/assets/letterbg",
+            "FromFile": "assets/{{TargetWithoutPath}}.png" 
+        },
+        {
+            //JA Migration Stuff
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "Entries": {
+                "IndustrializationRedux_MigrateIds_PackNotInstalled": {
+                    "Id": "IndustrializationRedux_MigrateIds_PackNotInstalled",
+                    "Trigger": "DayStarted",
+                    "Actions": [
+                        "Pathoschild.ContentPatcher_MigrateIds Items \"JsonAssets:big-craftables:Alternator E. Furnace\" {{ModID}}.AlternatorEFurnace",
+                        "Pathoschild.ContentPatcher_MigrateIds Items \"JsonAssets:big-craftables:Auto Miner\" {{ModID}}.AutoMiner",
+                        "Pathoschild.ContentPatcher_MigrateIds Items \"JsonAssets:big-craftables:Ceramic Kiln\" {{ModID}}.CeramicKiln",
+                        "Pathoschild.ContentPatcher_MigrateIds Items \"JsonAssets:big-craftables:Chromium Furnace\" {{ModID}}.ChromiumFurnace",
+                        "Pathoschild.ContentPatcher_MigrateIds Items \"JsonAssets:big-craftables:Combustion Generator\" {{ModID}}.CombustionGenerator",
+                        "Pathoschild.ContentPatcher_MigrateIds Items \"JsonAssets:big-craftables:Combustion Miner\" {{ModID}}.CombustionMiner",
+                        "Pathoschild.ContentPatcher_MigrateIds Items \"JsonAssets:big-craftables:Electric Furnace\" {{ModID}}.EFurnace",
+                        "Pathoschild.ContentPatcher_MigrateIds Items \"JsonAssets:big-craftables:Garden Cloche\" {{ModID}}.GardenCloche",
+                        "Pathoschild.ContentPatcher_MigrateIds Items \"JsonAssets:big-craftables:Gem Polisher\" {{ModID}}.GemPolisher",
+                        "Pathoschild.ContentPatcher_MigrateIds Items \"JsonAssets:big-craftables:Hay Bin\" {{ModID}}.HayBin",
+                        "Pathoschild.ContentPatcher_MigrateIds Items \"JsonAssets:big-craftables:Hay Rehydrator\" {{ModID}}.HayRehydrator",
+                        "Pathoschild.ContentPatcher_MigrateIds Items \"JsonAssets:big-craftables:Industrial Distillery\" {{ModID}}.IndustrialDistillery",
+                        "Pathoschild.ContentPatcher_MigrateIds Items \"JsonAssets:big-craftables:JojaCola Generator\" {{ModID}}.JColaGenerator",
+                        "Pathoschild.ContentPatcher_MigrateIds Items \"JsonAssets:big-craftables:Mineral Washer\" {{ModID}}.MineralWasher",
+                        "Pathoschild.ContentPatcher_MigrateIds Items \"JsonAssets:big-craftables:Preservative Press\" {{ModID}}.PreservativePress",
+                        "Pathoschild.ContentPatcher_MigrateIds Items \"JsonAssets:big-craftables:Pulverizer\" {{ModID}}.Pulverizer",
+                        "Pathoschild.ContentPatcher_MigrateIds Items \"JsonAssets:big-craftables:Rock Crusher\" {{ModID}}.RockCrusher",
+                        "Pathoschild.ContentPatcher_MigrateIds Items \"JsonAssets:big-craftables:Super Garden Cloche\" {{ModID}}.SuperGardenCloche",
+                        "Pathoschild.ContentPatcher_MigrateIds Items \"JsonAssets:big-craftables:Tree Cloche\" {{ModID}}.TreeCloche",
+                        "Pathoschild.ContentPatcher_MigrateIds Items \"JsonAssets:objects:Brick\" {{ModID}}.Brick",
+                        "Pathoschild.ContentPatcher_MigrateIds Items \"JsonAssets:objects:Chromium Bar\" {{ModID}}.ChroBar",
+                        "Pathoschild.ContentPatcher_MigrateIds Items \"JsonAssets:objects:Chromium Compound\" {{ModID}}.ChroCompound",
+                        "Pathoschild.ContentPatcher_MigrateIds Items \"JsonAssets:objects:Pulverized Copper\" {{ModID}}.PulvCopper",
+                        "Pathoschild.ContentPatcher_MigrateIds Items \"JsonAssets:objects:Pulverized Iron\" {{ModID}}.PulvIron",
+                        "Pathoschild.ContentPatcher_MigrateIds Items \"JsonAssets:objects:Pulverized Gold\" {{ModID}}.PulvGold",
+                        "Pathoschild.ContentPatcher_MigrateIds Items \"JsonAssets:objects:Pulverized Iridium\" {{ModID}}.PulvIridium",
+                        "Pathoschild.ContentPatcher_MigrateIds Items \"JsonAssets:objects:Pulverized Prismatic Shard\" {{ModID}}.PulvPris",
+                        "Pathoschild.ContentPatcher_MigrateIds Items \"JsonAssets:objects:Pulverized Quartz\" {{ModID}}.PulvQuartz",
+                        "Pathoschild.ContentPatcher_MigrateIds Items \"JsonAssets:objects:Pulverized Radioactive Metal\" {{ModID}}.PulvRadioactive"
+                        // "Pathoschild.ContentPatcher_MigrateIds Items \"JsonAssets:objects:Smelted Fairy Stone\" {{ModID}}.SmeltedFairyStone"
+                    ],
+                    "HostOnly": true
+                }
+            }
+        }
+    ]
+}

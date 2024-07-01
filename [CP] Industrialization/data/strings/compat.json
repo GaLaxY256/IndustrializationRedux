@@ -1,0 +1,18 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Strings/Objects",
+            "Entries": {
+                "{{ModID}}.PulvNickel_Name": "Pulverized Nickel",
+                "{{ModID}}.PulvNickel_Description": "Large pile of pure nickel, must be smelted in an Electric Furnace.",
+                "{{ModID}}.PulvBStone_Name": "Pulverized Blackstone",
+                "{{ModID}}.PulvBStone_Description": "Large pile of pure blackstone, must be smelted in an Electric Furnace."
+            },
+            "When": {
+                "HasMod": "MrtaiyouSolariaze.StrangeMachines",
+                "G256.IR.Code/EnabledPulverizer": true
+            }
+        }
+    ]
+}

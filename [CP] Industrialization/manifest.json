@@ -1,0 +1,21 @@
+{
+    "Name": "Industrialization Redux",
+    "Author": "GaLaxY256 kazuakisama DraLUSAD",
+    "Version": "1.1.1",
+    "Description": "Updated version of Industrialization",
+    "UniqueID": "G256.IndustrializationRedux",
+    "UpdateKeys": ["Nexus:22351"], // when you release the mod, see https://stardewvalleywiki.com/Modding:Modder_Guide/APIs/Update_checks
+    "ContentPackFor": {
+        "UniqueID": "Pathoschild.ContentPatcher"
+    },
+    "Dependencies": [
+        {
+            "UniqueID": "spacechase0.JsonAssets",
+            "IsRequired": false
+        },
+        {
+            "UniqueID": "G256.IR.Code",
+            "IsRequired": true
+        }
+    ]
+}
