@@ -638,9 +638,7 @@ namespace IndustrializationRedux
                         break;
                     }
                 }
-            } while (((fishCategory.Equals(-20)) || 
-            ((fishID!=null && fishID.Equals("842")))) &&
-            !trashCounter.Equals(10)); 
+            } while (!trashCounter.Equals(10));
             Random r = Utility.CreateDaySaveRandom(bobberTile.X, bobberTile.Y * 77f, Game1.timeOfDay);
             if (outputData.CustomData.ContainsKey("selph.ExtraMachineConfig.RequiredCountMax") &&
                 Int32.TryParse(outputData.CustomData["selph.ExtraMachineConfig.RequiredCountMax"], out int MaxRequiredCount) &&
