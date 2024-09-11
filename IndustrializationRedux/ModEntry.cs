@@ -631,14 +631,24 @@ namespace IndustrializationRedux
                         fishID = x.Key;
                         fishCategory = x.Value.Category;
                         nonFishContext = x.Value.ContextTags;
-                        if (!fishCategory.Equals(-4))
+
+                        // Check if a fish (not trash) is caught
+                        if (fishCategory == -4)
                         {
-                            trashCounter++;
-                        };
-                        break;
+                            break;  // Exit the loop as soon as a fish is caught
+                        }
+
+                        // If it's not a fish, increase the trash counter
+                        trashCounter++;
+
+                        // Optional: stop if 10 or more trash items have been caught
+                        if (trashCounter >= 10)
+                        {
+                            break;
+                        }
                     }
                 }
-            } while (!trashCounter.Equals(10));
+            } while (trashCounter < 10 && fishCategory != -4);
             Random r = Utility.CreateDaySaveRandom(bobberTile.X, bobberTile.Y * 77f, Game1.timeOfDay);
             if (outputData.CustomData.ContainsKey("selph.ExtraMachineConfig.RequiredCountMax") &&
                 Int32.TryParse(outputData.CustomData["selph.ExtraMachineConfig.RequiredCountMax"], out int MaxRequiredCount) &&
