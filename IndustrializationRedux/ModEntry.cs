@@ -623,7 +623,8 @@ namespace IndustrializationRedux
             do
             {
                 int randomDepth = (int)Math.Floor(Math.Pow(rand.NextDouble(), 2) * 2);
-                Item randomFish = location.getFish(0, baitID, randomDepth, who, 1, bobberTile, locationName);
+                // Item randomFish = location.getFish(0, baitID, randomDepth, who, 1, bobberTile, locationName);
+                Item randomFish = GameLocation.GetFishFromLocationData(locationName, bobberTile, randomDepth, who, false, true, location);
                 foreach (KeyValuePair<string, ObjectData> x in Game1.objectData)
                 {
                     if (ItemRegistry.HasItemId(randomFish, x.Key))
