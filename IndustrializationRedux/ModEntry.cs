@@ -624,6 +624,7 @@ namespace IndustrializationRedux
             Vector2 bobberTile = machine.TileLocation;
             string baitID = null;
             string fishID = null;
+            string fishName = null;
             int minStack = 1;
             int maxStack = 1;
             int totalStack = 0;
@@ -632,6 +633,7 @@ namespace IndustrializationRedux
             string locationName = machine.Location.Name;
             int fishCategory = -4;
             int trashCounter = 0;
+            
             List<string> nonFishContext = new();
             Random rand = new();
             foreach (KeyValuePair<string, ObjectData> v in Game1.objectData)
@@ -651,6 +653,7 @@ namespace IndustrializationRedux
                 {
                     if (ItemRegistry.HasItemId(randomFish, x.Key))
                     {
+                        fishName = x.Value.Name;
                         fishID = x.Key;
                         fishCategory = x.Value.Category;
                         nonFishContext = x.Value.ContextTags;
@@ -673,6 +676,7 @@ namespace IndustrializationRedux
                         {
                             break;
                         }
+                        
                     }
                 }
             } while (trashCounter < 10 && fishCategory != -4 && fishID.Equals("842"));
@@ -707,7 +711,7 @@ namespace IndustrializationRedux
                 int stackSum = r.Next(minStack, maxStack); 
                 totalStack += stackSum;
             }
-            overrideMinutesUntilReady = 20 * baseOutputStack;
+            overrideMinutesUntilReady = null;
             return new Object(fishID, totalStack);
         }
     }
