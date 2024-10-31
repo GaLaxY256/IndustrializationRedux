@@ -26,10 +26,12 @@ namespace IndustrializationRedux
     internal sealed class ModEntry : Mod
     {
         public static ModConfig Config;
+        private CompensationData compensationData;
         public override void Entry(IModHelper helper)
         {
             helper.Events.GameLoop.GameLaunched += OnGameLaunched;
             helper.Events.GameLoop.DayStarted += OnDayStarted;
+            helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
         }
         private void OnGameLaunched(object? sender, StardewModdingAPI.Events.GameLaunchedEventArgs e)
         {
@@ -443,9 +445,30 @@ namespace IndustrializationRedux
                 setValue: value => Config.EnabledTreeCloche = value
             );
         }
+        private void OnSaveLoaded(object? sender, EventArgs e)
+        {
+            compensationData = Helper.Data.ReadSaveData<CompensationData>("CompensationGiven") ?? new CompensationData();
+            if (!compensationData.Given
+                && Game1.player.mailReceived.Contains("G256.IndustrializationRedux.EFurnaceMail")
+                && LocalizedContentManager.CurrentLanguageCode == LocalizedContentManager.LanguageCode.zh
+                && Config.ProgressMode.Equals(true)
+            )
+            {
+                Game1.addMail("G256.IndustrializationRedux.12bugfixmail");
+                Monitor.Log("Compensation mail sent.", LogLevel.Info);
+                compensationData.Given = true;
+                Helper.Data.WriteSaveData("CompensationGiven", compensationData);
+            }
 
+            // Detach the event after it runs once
+            Helper.Events.GameLoop.SaveLoaded -= OnSaveLoaded;
+        }
         public static bool anyMonoShipped300 = false;
         public static bool anyMonoShipped777 = false;
+        public class CompensationData
+        {
+            public bool Given { get; set; } = false;
+        }
         private void OnDayStarted(object? sender, DayStartedEventArgs e)
         {
             foreach (CropData data in Game1.cropData.Values)
@@ -457,7 +480,7 @@ namespace IndustrializationRedux
                 }
             }
         }
-        public static Item OutputSeedMakerExpanded(Object machine, Item inputItem, bool probe, MachineItemOutput outputData, out int? overrideMinutesUntilReady)
+        public static Item OutputSeedMakerExpanded(Object machine, Item inputItem, bool probe, MachineItemOutput outputData, Farmer player, out int? overrideMinutesUntilReady)
         {
             bool BetterSeedMaker = Config.BetterSeedMaker;
             bool StaticSeedMaker = Config.StaticSeedMaker;
@@ -509,7 +532,7 @@ namespace IndustrializationRedux
             }
             return new Object(seed, r.Next(minSeeds, maxSeeds));
         }
-        public static Item OutputGardenCloche(Object machine, Item inputItem, bool probe, MachineItemOutput outputData, out int? overrideMinutesUntilReady)
+        public static Item OutputGardenCloche(Object machine, Item inputItem, bool probe, MachineItemOutput outputData, Farmer player, out int? overrideMinutesUntilReady)
         {
             overrideMinutesUntilReady = null;
 
@@ -562,7 +585,7 @@ namespace IndustrializationRedux
         }
 
 
-        public static Item OutputGemPolisher(Object machine, Item inputItem, bool probe, MachineItemOutput outputData, out int? overrideMinutesUntilReady)
+        public static Item OutputGemPolisher(Object machine, Item inputItem, bool probe, MachineItemOutput outputData, Farmer player, out int? overrideMinutesUntilReady)
         {
             overrideMinutesUntilReady = null;
             if (!inputItem.HasTypeObject())
@@ -596,7 +619,7 @@ namespace IndustrializationRedux
             return false;
         }
 
-        public static Item OutputFishingWell(Object machine, Item inputItem, bool probe, MachineItemOutput outputData, out int? overrideMinutesUntilReady)
+        public static Item OutputFishingWell(Object machine, Item inputItem, bool probe, MachineItemOutput outputData, Farmer player, out int? overrideMinutesUntilReady)
         {
             Vector2 bobberTile = machine.TileLocation;
             string baitID = null;
@@ -605,7 +628,6 @@ namespace IndustrializationRedux
             int maxStack = 1;
             int totalStack = 0;
             int baseOutputStack = 1;
-            Farmer who = Game1.player;
             GameLocation location = machine.Location;
             string locationName = machine.Location.Name;
             int fishCategory = -4;
@@ -623,8 +645,8 @@ namespace IndustrializationRedux
             do
             {
                 int randomDepth = (int)Math.Floor(Math.Pow(rand.NextDouble(), 2) * 2);
-                // Item randomFish = location.getFish(0, baitID, randomDepth, who, 1, bobberTile, locationName);
-                Item randomFish = GameLocation.GetFishFromLocationData(locationName, bobberTile, randomDepth, who, false, true, location);
+                Item randomFish = location.getFish(0, baitID, randomDepth, player, 1, bobberTile, locationName);
+                //Item randomFish = GameLocation.GetFishFromLocationData(locationName, bobberTile, randomDepth, player, false, true, location);
                 foreach (KeyValuePair<string, ObjectData> x in Game1.objectData)
                 {
                     if (ItemRegistry.HasItemId(randomFish, x.Key))
@@ -639,6 +661,10 @@ namespace IndustrializationRedux
                             break;  // Exit the loop as soon as a fish is caught
                         }
 
+                        if (fishID.Equals("842")) {
+                            continue;
+                        }
+
                         // If it's not a fish, increase the trash counter
                         trashCounter++;
 
@@ -649,16 +675,17 @@ namespace IndustrializationRedux
                         }
                     }
                 }
-            } while (trashCounter < 10 && fishCategory != -4);
+            } while (trashCounter < 10 && fishCategory != -4 && fishID.Equals("842"));
             Random r = Utility.CreateDaySaveRandom(bobberTile.X, bobberTile.Y * 77f, Game1.timeOfDay);
-            if (outputData.CustomData.ContainsKey("selph.ExtraMachineConfig.RequiredCountMax") &&
-                Int32.TryParse(outputData.CustomData["selph.ExtraMachineConfig.RequiredCountMax"], out int MaxRequiredCount) &&
-                MachineDataUtility.TryGetMachineOutputRule(machine, machine.GetMachineData(), MachineOutputTrigger.ItemPlacedInMachine, inputItem, who, machine.Location, out _, out var triggerRule, out _, out _))
+            if (outputData.CustomData.ContainsKey("G256.MaxBaitCount") &&
+                Int32.TryParse(outputData.CustomData["G256.MaxBaitCount"], out int MaxRequiredCount) &&
+                MachineDataUtility.TryGetMachineOutputRule(machine, machine.GetMachineData(), MachineOutputTrigger.ItemPlacedInMachine, inputItem, player, machine.Location, out _, out var triggerRule, out _, out _))
             {
                 int MinRequiredCount = triggerRule.RequiredCount;
                 if (MaxRequiredCount >= MinRequiredCount)
                 {
                     baseOutputStack = Math.Min(inputItem.Stack, MaxRequiredCount);
+                    Object.ConsumeInventoryItem(player, inputItem, baseOutputStack - MinRequiredCount);
                 }
             }
             for (int i = 0; i < baseOutputStack; i++)
@@ -681,7 +708,7 @@ namespace IndustrializationRedux
                 totalStack += stackSum;
             }
             overrideMinutesUntilReady = 20 * baseOutputStack;
-            return new Object(fishID, 1);
+            return new Object(fishID, totalStack);
         }
     }
 }
